@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>The Digital Boutique - Efex Luxury</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Digital Boutique - Efex Luxury</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -18,341 +24,274 @@
                         "primary-dark": "#B59230",
                         "primary-light": "#F3D98B",
                         "background-light": "#ffffff",
-                        "background-dark": "#0a0a0a","background-card": "#121212","text-main": "#FFFFFF","text-muted": "#A1A1AA",},
+                        "background-dark": "#0a0a0a", "background-card": "#121212", "text-main": "#FFFFFF", "text-muted": "#A1A1AA",
+                    },
                     fontFamily: {
                         "display": ["Playfair Display", "serif"],
                         "body": ["Montserrat", "sans-serif"],
                         "sans": ["Spline Sans", "sans-serif"],
                     },
-                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "2xl": "2rem", "full": "9999px"},
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "2xl": "2rem", "full": "9999px" },
                 },
             },
         }
     </script>
-<style>html {
-            scroll-behavior: smooth;
-        }.video-bg-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            z-index: 0;
-        }
-        .video-bg-container video {
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            object-fit: cover;
-        }
-        .video-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.4);
-            z-index: 1;
-        }header.glass-header {
-            background: rgba(10, 10, 10, 0.85);backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }.group:hover .mega-menu {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }.text-gradient-gold {
-            background: linear-gradient(to right, #D4AF37, #F3D98B, #D4AF37);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-size: 200% auto;
-            animation: shine 5s linear infinite;
-        }
-        @keyframes shine {
-            to {
-                background-position: 200% center;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body class="bg-background-dark text-white font-body antialiased selection:bg-primary selection:text-black">
-<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-<header class="glass-header fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 lg:px-12 transition-all">
-    <div class="flex items-center gap-4 text-white z-50">
-        <a class="flex items-center gap-3 group" href="./index.html">
-            <div class="size-8 text-primary">
-                <span class="material-symbols-outlined !text-[32px]">diamond</span>
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <div id="header-container"></div>
+
+        <section class="relative h-[90vh] w-full flex items-center justify-center overflow-hidden bg-background-dark">
+            <div class="video-bg-container">
+                <div class="absolute inset-0 bg-cover bg-center animate-pulse-slow"
+                    data-alt="Cinematic shot of a man in a tuxedo walking through a grand hall"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC66r2gtIqRiO_vJrWPe94nwEgzPaWecYQwF0W63ou6yzCxGzslL7r2ApwYWqtllDK_uSkGDCsGsPi6l82NHdlFfIaWBGLJh6qsIzAI6_sCKLSbn9eED6PHbY3_mNH0rKIQg4rJhq-o9TbTwCpvbIg0WY9Mnjt5dM-3dBA2yiy_MfG2dTXjY0Myt3GVWE5UAceVeljVUDKYmtOe-3BH4alpN_jX4VdUWyLKafoW1VTvgMGHISCTAgfP7jHMHaAHqjKu89ZXR017-025");'>
+                </div>
+                <div class="video-overlay bg-gradient-to-b from-black/70 via-black/30 to-background-dark"></div>
             </div>
-            <h2 class="text-2xl font-display font-bold tracking-[0.2em] uppercase text-white">EFEX</h2>
-        </a>
-    </div>
-    <nav class="hidden lg:flex flex-1 justify-center gap-10 text-white/90">
-        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./boutique.html">The Boutique</a>
-        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./gallery.html">Gallery</a>
-        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./services.html">Services</a>
-        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./the-house.html">The House</a>
-        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./journal.html">Journal</a>
-        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./about.html">About Us</a>
-        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./contact.html">Contact</a>
-    </nav>
-    <div class="flex items-center gap-4 z-50 text-white">
-        <button class="flex size-10 items-center justify-center rounded-full hover:bg-white/10 hover:text-primary transition-colors">
-            <span class="material-symbols-outlined text-[20px]">search</span>
-        </button>
-        <button class="flex size-10 items-center justify-center rounded-full hover:bg-white/10 hover:text-primary transition-colors">
-            <span class="material-symbols-outlined text-[20px]">person</span>
-        </button>
-        <button class="flex size-10 items-center justify-center rounded-full hover:bg-white/10 hover:text-primary transition-colors relative">
-            <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
-            <span class="absolute top-1 right-1 size-2 bg-primary rounded-full border border-background-dark"></span>
-        </button>
-        <button class="lg:hidden flex size-10 items-center justify-center rounded-full hover:bg-white/10 text-white">
-            <span class="material-symbols-outlined text-[20px]">menu</span>
-        </button>
-    </div>
-</header>
-<section class="relative h-[90vh] w-full flex items-center justify-center overflow-hidden bg-background-dark">
-<div class="video-bg-container">
-<div class="absolute inset-0 bg-cover bg-center animate-pulse-slow" data-alt="Cinematic shot of a man in a tuxedo walking through a grand hall" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC66r2gtIqRiO_vJrWPe94nwEgzPaWecYQwF0W63ou6yzCxGzslL7r2ApwYWqtllDK_uSkGDCsGsPi6l82NHdlFfIaWBGLJh6qsIzAI6_sCKLSbn9eED6PHbY3_mNH0rKIQg4rJhq-o9TbTwCpvbIg0WY9Mnjt5dM-3dBA2yiy_MfG2dTXjY0Myt3GVWE5UAceVeljVUDKYmtOe-3BH4alpN_jX4VdUWyLKafoW1VTvgMGHISCTAgfP7jHMHaAHqjKu89ZXR017-025");'></div>
-<div class="video-overlay bg-gradient-to-b from-black/70 via-black/30 to-background-dark"></div>
-</div>
-<div class="relative z-10 flex flex-col items-center justify-center text-center px-4 max-w-5xl mx-auto mt-16">
-<div class="mb-8 flex items-center justify-center gap-4">
-<span class="h-[1px] w-12 bg-primary/70"></span>
-<p class="text-primary font-bold tracking-[0.3em] text-xs uppercase">Est. 2025</p>
-<span class="h-[1px] w-12 bg-primary/70"></span>
-</div>
-<h1 class="text-white font-display text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight mb-8 drop-shadow-2xl">
-                    ROYALTY MEETS <br/><span class="text-gradient-gold">MODERNITY</span>
-</h1>
-<p class="text-gray-300 font-body text-base md:text-lg font-light max-w-2xl mb-12 leading-relaxed drop-shadow-md">
-                    Experience the pinnacle of 2025 menswear. Precision tailoring for the distinguished gentleman in a digital age.
+            <div
+                class="relative z-10 flex flex-col items-center justify-center text-center px-4 max-w-5xl mx-auto mt-16">
+                <div class="mb-8 flex items-center justify-center gap-4">
+                    <span class="h-[1px] w-12 bg-primary/70"></span>
+                    <p class="text-primary font-bold tracking-[0.3em] text-xs uppercase">Est. 2025</p>
+                    <span class="h-[1px] w-12 bg-primary/70"></span>
+                </div>
+                <h1
+                    class="text-white font-display text-5xl md:text-7xl lg:text-8xl font-black leading-tight tracking-tight mb-8 drop-shadow-2xl">
+                    ROYALTY MEETS <br /><span class="text-gradient-gold">MODERNITY</span>
+                </h1>
+                <p
+                    class="text-gray-300 font-body text-base md:text-lg font-light max-w-2xl mb-12 leading-relaxed drop-shadow-md">
+                    Experience the pinnacle of 2025 menswear. Precision tailoring for the distinguished gentleman in a
+                    digital age.
                 </p>
-<div class="flex flex-col sm:flex-row gap-6 w-full justify-center">
-<button class="group relative flex items-center justify-center overflow-hidden rounded-full bg-primary px-10 py-4 min-w-[220px] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)]">
-<span class="relative z-10 text-black text-xs font-bold uppercase tracking-widest">Shop the 2025 Collection</span>
-<div class="absolute inset-0 -z-0 bg-white opacity-0 transition-opacity group-hover:opacity-20"></div>
-</button>
-<button class="group flex items-center justify-center rounded-full border border-primary/50 bg-black/40 backdrop-blur-md px-10 py-4 min-w-[220px] text-primary transition-all duration-300 hover:bg-primary hover:text-black hover:border-primary">
-<span class="text-xs font-bold uppercase tracking-widest">Book a Private Stylist</span>
-</button>
-</div>
-</div>
-<div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white/30">
-<span class="material-symbols-outlined text-3xl">keyboard_arrow_down</span>
-</div>
-</section>
-<section class="relative py-24 px-6 lg:px-12 bg-background-dark">
-<div class="max-w-[1440px] mx-auto">
-<div class="text-center mb-20">
-<h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">The Digital Boutique</h2>
-<p class="text-text-muted text-lg max-w-xl mx-auto font-light">
+                <div class="flex flex-col sm:flex-row gap-6 w-full justify-center">
+                    <button onclick="window.location.href='./boutique.html'"
+                        class="group relative flex items-center justify-center overflow-hidden rounded-full bg-primary px-10 py-4 min-w-[220px] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(212,175,55,0.4)]">
+                        <span class="relative z-10 text-black text-xs font-bold uppercase tracking-widest">Shop the 2025
+                            Collection</span>
+                        <div class="absolute inset-0 -z-0 bg-white opacity-0 transition-opacity group-hover:opacity-20">
+                        </div>
+                    </button>
+                    <button onclick="window.location.href='./contact.html'"
+                        class="group flex items-center justify-center rounded-full border border-primary/50 bg-black/40 backdrop-blur-md px-10 py-4 min-w-[220px] text-primary transition-all duration-300 hover:bg-primary hover:text-black hover:border-primary">
+                        <span class="text-xs font-bold uppercase tracking-widest">Book a Private Stylist</span>
+                    </button>
+                </div>
+            </div>
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white/30">
+                <span class="material-symbols-outlined text-3xl">keyboard_arrow_down</span>
+            </div>
+        </section>
+        <section class="relative py-24 px-6 lg:px-12 bg-background-dark">
+            <div class="max-w-[1440px] mx-auto">
+                <div class="text-center mb-20">
+                    <h2 class="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">The Digital
+                        Boutique</h2>
+                    <p class="text-text-muted text-lg max-w-xl mx-auto font-light">
                         Curated selections for every facet of the modern gentleman's life.
                     </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 h-auto lg:h-[700px]">
-<div class="group relative h-[500px] lg:h-full w-full overflow-hidden rounded-2xl cursor-pointer bg-background-card border border-white/5">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 ease-out group-hover:scale-110 opacity-80 group-hover:opacity-100" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA0TFZZF8jBBi0lFIR4OeD4BXhh0whFXgxw1jIAw0v0y0SVtFS_JhMYp5xpoJfXYxC4n5Mp2I2LrCG3eu1so8z4VZ9OlMEjDsPq93VlZa9DsUsQNu45xPqcE2nN9IQPXj4_gWpVQgYq31tTDD3UKubJApaSCK5KsH9SmbbQjw-iQvISnQk2wq5QWoySQnTfOjV_539sWsKgRzZlqzuw7tBSEVAKOe333gIqgEeRHl6krRK6czBv_UOaDzjvvzPO7gvllqg1jk1C0yGm");'></div>
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/40 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-80"></div>
-<div class="absolute bottom-0 left-0 p-8 lg:p-12 w-full transform transition-transform duration-500">
-<span class="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-3 block opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">Bespoke Excellence</span>
-<h3 class="font-display text-3xl lg:text-4xl font-bold text-white mb-4">Classic Suits</h3>
-<div class="h-0 overflow-hidden group-hover:h-auto transition-all duration-500">
-<p class="text-gray-300 text-sm mb-6 max-w-xs font-light leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
-                                    Timeless tailoring with modern cuts. Crafted from the finest Italian wools for the boardroom and beyond.
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 h-auto lg:h-[700px]">
+                    <div
+                        class="group relative h-[500px] lg:h-full w-full overflow-hidden rounded-2xl cursor-pointer bg-background-card border border-white/5">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 ease-out group-hover:scale-110 opacity-80 group-hover:opacity-100"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA0TFZZF8jBBi0lFIR4OeD4BXhh0whFXgxw1jIAw0v0y0SVtFS_JhMYp5xpoJfXYxC4n5Mp2I2LrCG3eu1so8z4VZ9OlMEjDsPq93VlZa9DsUsQNu45xPqcE2nN9IQPXj4_gWpVQgYq31tTDD3UKubJApaSCK5KsH9SmbbQjw-iQvISnQk2wq5QWoySQnTfOjV_539sWsKgRzZlqzuw7tBSEVAKOe333gIqgEeRHl6krRK6czBv_UOaDzjvvzPO7gvllqg1jk1C0yGm");'>
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/40 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-80">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 p-8 lg:p-12 w-full transform transition-transform duration-500">
+                            <span
+                                class="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-3 block opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">Bespoke
+                                Excellence</span>
+                            <h3 class="font-display text-3xl lg:text-4xl font-bold text-white mb-4">Classic Suits</h3>
+                            <div class="h-0 overflow-hidden group-hover:h-auto transition-all duration-500">
+                                <p
+                                    class="text-gray-300 text-sm mb-6 max-w-xs font-light leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
+                                    Timeless tailoring with modern cuts. Crafted from the finest Italian wools for the
+                                    boardroom and beyond.
                                 </p>
-</div>
-<div class="flex items-center gap-3 text-white group-hover:text-primary transition-colors">
-<span class="text-xs font-bold uppercase tracking-widest">Explore Category</span>
-<span class="material-symbols-outlined text-lg group-hover:translate-x-2 transition-transform">arrow_forward</span>
-</div>
-</div>
-</div>
-<div class="group relative h-[500px] lg:h-full w-full overflow-hidden rounded-2xl cursor-pointer bg-background-card border border-white/5">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 ease-out group-hover:scale-110 opacity-80 group-hover:opacity-100" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC9ZOKbfwfqbpJymlx6weJw2AsdCC2b0SFahHXZHdJtgWgmZATbYbwQbZDPC05nsEN_vALImn4x5o8QTX3jg9TIszqCH4wkbmcBeXunB7h_DSbINtxMV4JvpFlUFY0tapUxhJoB38zFgylWlwIb8JT9FnIPdvuiSApG8OtgdLEjZi5QhBivH1iJQeHpeh7KE_Dw0fC9mIclQxz9OUiV0650xUXtOWAlOviHIqSnaH1DGF-sCJjzO3m-v8r_daWnI21xDKb48tsyF8aX");'></div>
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/40 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-80"></div>
-<div class="absolute bottom-0 left-0 p-8 lg:p-12 w-full transform transition-transform duration-500">
-<span class="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-3 block opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">Refined Leisure</span>
-<h3 class="font-display text-3xl lg:text-4xl font-bold text-white mb-4">Contemporary Casuals</h3>
-<div class="h-0 overflow-hidden group-hover:h-auto transition-all duration-500">
-<p class="text-gray-300 text-sm mb-6 max-w-xs font-light leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
-                                    Elevated essentials for off-duty moments. Premium velvets, silks, and knits designed for comfort without compromise.
+                            </div>
+                            <div class="flex items-center gap-3 text-white group-hover:text-primary transition-colors">
+                                <span class="text-xs font-bold uppercase tracking-widest">Explore Category</span>
+                                <span
+                                    class="material-symbols-outlined text-lg group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group relative h-[500px] lg:h-full w-full overflow-hidden rounded-2xl cursor-pointer bg-background-card border border-white/5">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 ease-out group-hover:scale-110 opacity-80 group-hover:opacity-100"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC9ZOKbfwfqbpJymlx6weJw2AsdCC2b0SFahHXZHdJtgWgmZATbYbwQbZDPC05nsEN_vALImn4x5o8QTX3jg9TIszqCH4wkbmcBeXunB7h_DSbINtxMV4JvpFlUFY0tapUxhJoB38zFgylWlwIb8JT9FnIPdvuiSApG8OtgdLEjZi5QhBivH1iJQeHpeh7KE_Dw0fC9mIclQxz9OUiV0650xUXtOWAlOviHIqSnaH1DGF-sCJjzO3m-v8r_daWnI21xDKb48tsyF8aX");'>
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/40 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-80">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 p-8 lg:p-12 w-full transform transition-transform duration-500">
+                            <span
+                                class="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-3 block opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">Refined
+                                Leisure</span>
+                            <h3 class="font-display text-3xl lg:text-4xl font-bold text-white mb-4">Contemporary Casuals
+                            </h3>
+                            <div class="h-0 overflow-hidden group-hover:h-auto transition-all duration-500">
+                                <p
+                                    class="text-gray-300 text-sm mb-6 max-w-xs font-light leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
+                                    Elevated essentials for off-duty moments. Premium velvets, silks, and knits designed
+                                    for comfort without compromise.
                                 </p>
-</div>
-<div class="flex items-center gap-3 text-white group-hover:text-primary transition-colors">
-<span class="text-xs font-bold uppercase tracking-widest">Explore Category</span>
-<span class="material-symbols-outlined text-lg group-hover:translate-x-2 transition-transform">arrow_forward</span>
-</div>
-</div>
-</div>
-<div class="group relative h-[500px] lg:h-full w-full overflow-hidden rounded-2xl cursor-pointer bg-background-card border border-white/5">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 ease-out group-hover:scale-110 opacity-80 group-hover:opacity-100" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8T1gRxyxpkmtFRK6LdXGcYpBUiQ1KOXimUx9oJDPfPCdaE7TnuJMJBjBenSupzcGWh6Ha2ycIKJXRX2_PsjxZjGRQa42GNFn4g5NlzVEpyxidEeSYs0lCAHnGLTZS-i36-PnbdvoeGjRSbsRX128j3-kgbbBA-qgvF0fu2LTAG5MsdNif099SplLoYzjRIEiy1f7SFk_Wt4ApYwfnCnGDN2HZxSmQWVw9ULneaj2dZg7uuHoaT7jw3k9gMFgBO-kdrS6dW5TLjql9");'></div>
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/40 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-80"></div>
-<div class="absolute bottom-0 left-0 p-8 lg:p-12 w-full transform transition-transform duration-500">
-<span class="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-3 block opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">The Final Touch</span>
-<h3 class="font-display text-3xl lg:text-4xl font-bold text-white mb-4">Accessories</h3>
-<div class="h-0 overflow-hidden group-hover:h-auto transition-all duration-500">
-<p class="text-gray-300 text-sm mb-6 max-w-xs font-light leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
-                                    Statement pieces that define your look. From Swiss timepieces to handcrafted leather goods and cufflinks.
+                            </div>
+                            <div class="flex items-center gap-3 text-white group-hover:text-primary transition-colors">
+                                <span class="text-xs font-bold uppercase tracking-widest">Explore Category</span>
+                                <span
+                                    class="material-symbols-outlined text-lg group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="group relative h-[500px] lg:h-full w-full overflow-hidden rounded-2xl cursor-pointer bg-background-card border border-white/5">
+                        <div class="absolute inset-0 bg-cover bg-center transition-transform duration-1000 ease-out group-hover:scale-110 opacity-80 group-hover:opacity-100"
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC8T1gRxyxpkmtFRK6LdXGcYpBUiQ1KOXimUx9oJDPfPCdaE7TnuJMJBjBenSupzcGWh6Ha2ycIKJXRX2_PsjxZjGRQa42GNFn4g5NlzVEpyxidEeSYs0lCAHnGLTZS-i36-PnbdvoeGjRSbsRX128j3-kgbbBA-qgvF0fu2LTAG5MsdNif099SplLoYzjRIEiy1f7SFk_Wt4ApYwfnCnGDN2HZxSmQWVw9ULneaj2dZg7uuHoaT7jw3k9gMFgBO-kdrS6dW5TLjql9");'>
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/40 to-transparent opacity-90 transition-opacity duration-300 group-hover:opacity-80">
+                        </div>
+                        <div
+                            class="absolute bottom-0 left-0 p-8 lg:p-12 w-full transform transition-transform duration-500">
+                            <span
+                                class="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-3 block opacity-0 -translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">The
+                                Final Touch</span>
+                            <h3 class="font-display text-3xl lg:text-4xl font-bold text-white mb-4">Accessories</h3>
+                            <div class="h-0 overflow-hidden group-hover:h-auto transition-all duration-500">
+                                <p
+                                    class="text-gray-300 text-sm mb-6 max-w-xs font-light leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-700 delay-100">
+                                    Statement pieces that define your look. From Swiss timepieces to handcrafted leather
+                                    goods and cufflinks.
                                 </p>
-</div>
-<div class="flex items-center gap-3 text-white group-hover:text-primary transition-colors">
-<span class="text-xs font-bold uppercase tracking-widest">Explore Category</span>
-<span class="material-symbols-outlined text-lg group-hover:translate-x-2 transition-transform">arrow_forward</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="py-24 bg-background-card text-white overflow-hidden border-t border-white/5">
-<div class="max-w-[1400px] mx-auto px-6">
-<div class="flex items-end justify-between mb-16">
-<div>
-<h2 class="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4">Curated For You</h2>
-<p class="font-display text-4xl md:text-5xl font-bold text-gradient-gold">New Arrivals</p>
-</div>
-<a class="hidden md:flex items-center gap-3 text-white hover:text-primary transition-colors group" href="#">
-<span class="text-xs font-bold uppercase tracking-widest">View All Products</span>
-<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-</a>
-</div>
-<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-<div class="group cursor-pointer">
-<div class="relative aspect-[3/4] overflow-hidden rounded-xl mb-6 bg-background-dark">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAg-WR16NrXYgyN4WsY80qr5EPeCpgltaa93EcdJMQAHI-_SZflYHlKtrBDzOCgWkuy64aViaTGY2kmpPFItW-uGaep5N4F5hzZthK73OPVscHRurDaZFxB490nZIPZ651bA2lKD-HG1-yuNwEzB2CA0AuYqiIqIO2C1go6SPdA-Xyg1uPEN-XiVcO_UjSkfUiNKVX1im4Yyz_z28sYI73H58tYWBjzCuDsHglYyGZsX_0x2S7VU2ONYMuevaLLtlXfnzD2bUg3WmqK");'></div>
-<div class="absolute top-4 left-4 bg-primary text-black text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-sm">
+                            </div>
+                            <div class="flex items-center gap-3 text-white group-hover:text-primary transition-colors">
+                                <span class="text-xs font-bold uppercase tracking-widest">Explore Category</span>
+                                <span
+                                    class="material-symbols-outlined text-lg group-hover:translate-x-2 transition-transform">arrow_forward</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-24 bg-background-card text-white overflow-hidden border-t border-white/5">
+            <div class="max-w-[1400px] mx-auto px-6">
+                <div class="flex items-end justify-between mb-16">
+                    <div>
+                        <h2 class="text-primary text-xs font-bold tracking-[0.2em] uppercase mb-4">Curated For You</h2>
+                        <p class="font-display text-4xl md:text-5xl font-bold text-gradient-gold">New Arrivals</p>
+                    </div>
+                    <a class="hidden md:flex items-center gap-3 text-white hover:text-primary transition-colors group"
+                        href="./boutique.html">
+                        <span class="text-xs font-bold uppercase tracking-widest">View All Products</span>
+                        <span
+                            class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="group cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-xl mb-6 bg-background-dark">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAg-WR16NrXYgyN4WsY80qr5EPeCpgltaa93EcdJMQAHI-_SZflYHlKtrBDzOCgWkuy64aViaTGY2kmpPFItW-uGaep5N4F5hzZthK73OPVscHRurDaZFxB490nZIPZ651bA2lKD-HG1-yuNwEzB2CA0AuYqiIqIO2C1go6SPdA-Xyg1uPEN-XiVcO_UjSkfUiNKVX1im4Yyz_z28sYI73H58tYWBjzCuDsHglYyGZsX_0x2S7VU2ONYMuevaLLtlXfnzD2bUg3WmqK");'>
+                            </div>
+                            <div
+                                class="absolute top-4 left-4 bg-primary text-black text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-sm">
                                 Best Seller
                             </div>
-<button class="absolute bottom-4 right-4 size-10 rounded-full bg-white text-black flex items-center justify-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-primary">
-<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
-</button>
-</div>
-<div>
-<h3 class="font-display text-xl font-medium text-white group-hover:text-primary transition-colors">The Executive Charcoal</h3>
-<p class="text-text-muted text-xs uppercase tracking-wider mt-1 mb-2">Classic Suits</p>
-<p class="text-primary font-medium">$2,450.00</p>
-</div>
-</div>
-<div class="group cursor-pointer">
-<div class="relative aspect-[3/4] overflow-hidden rounded-xl mb-6 bg-background-dark">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAq97ofAepLIedgzDGTcFImee-5MP2EG__gX4Psphux2zVyi2vrbDZnwF9k5vkYSrBJeC7B9Abj9ppa5KnLfEC9PN57VMPKFXPybJBrUxq7ZAq1xE_vHy7cgqQqOja1ncNFOd4NftIDo0J79gLrOXtQ3be53PiT9FnswlY1oD0PPT3-XLTY9BaSsXMFDsdSP3KePxwOuxb37NGLPKNFEqWpmkggWYeNXEUdavI-iHJ0U-HRltA6b_LflHJAuTErvQHvxT766A6JyhLA");'></div>
-<button class="absolute bottom-4 right-4 size-10 rounded-full bg-white text-black flex items-center justify-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-primary">
-<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
-</button>
-</div>
-<div>
-<h3 class="font-display text-xl font-medium text-white group-hover:text-primary transition-colors">London Fog Trench</h3>
-<p class="text-text-muted text-xs uppercase tracking-wider mt-1 mb-2">Contemporary Casuals</p>
-<p class="text-primary font-medium">$1,890.00</p>
-</div>
-</div>
-<div class="group cursor-pointer">
-<div class="relative aspect-[3/4] overflow-hidden rounded-xl mb-6 bg-background-dark">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDGTTr6GwhWCA2OKudlt2hc8BsvnMFsmB6iVwGb8bXWgaSrZ-8PmPCF-2VrcEGFw00l2TIvasaJrzH66bmilwbqNcpIGYEhZGNJ44SxNx4ojj9ctSPngZs89tNde2DYaj6JRbKE0H4lCsxxe6OKTQOYn-XXQD6-g93wLuIQfQcPOR2RN6Mn6NVe0rUcx6P7m27FvmCUxce2SmCoyt9bS8FZFxmS14GDlKdt59Z735fwAtCIyInuWQG4sKlwA0THXGaRcGGXVKfpnayQ");'></div>
-<div class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white border border-white/20 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-sm">
+                            <button
+                                class="absolute bottom-4 right-4 size-10 rounded-full bg-white text-black flex items-center justify-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-primary">
+                                <span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                            </button>
+                        </div>
+                        <div>
+                            <h3
+                                class="font-display text-xl font-medium text-white group-hover:text-primary transition-colors">
+                                The Executive Charcoal</h3>
+                            <p class="text-text-muted text-xs uppercase tracking-wider mt-1 mb-2">Classic Suits</p>
+                            <p class="text-primary font-medium">$2,450.00</p>
+                        </div>
+                    </div>
+                    <div class="group cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-xl mb-6 bg-background-dark">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAq97ofAepLIedgzDGTcFImee-5MP2EG__gX4Psphux2zVyi2vrbDZnwF9k5vkYSrBJeC7B9Abj9ppa5KnLfEC9PN57VMPKFXPybJBrUxq7ZAq1xE_vHy7cgqQqOja1ncNFOd4NftIDo0J79gLrOXtQ3be53PiT9FnswlY1oD0PPT3-XLTY9BaSsXMFDsdSP3KePxwOuxb37NGLPKNFEqWpmkggWYeNXEUdavI-iHJ0U-HRltA6b_LflHJAuTErvQHvxT766A6JyhLA");'>
+                            </div>
+                            <button
+                                class="absolute bottom-4 right-4 size-10 rounded-full bg-white text-black flex items-center justify-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-primary">
+                                <span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                            </button>
+                        </div>
+                        <div>
+                            <h3
+                                class="font-display text-xl font-medium text-white group-hover:text-primary transition-colors">
+                                London Fog Trench</h3>
+                            <p class="text-text-muted text-xs uppercase tracking-wider mt-1 mb-2">Contemporary Casuals
+                            </p>
+                            <p class="text-primary font-medium">$1,890.00</p>
+                        </div>
+                    </div>
+                    <div class="group cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-xl mb-6 bg-background-dark">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDGTTr6GwhWCA2OKudlt2hc8BsvnMFsmB6iVwGb8bXWgaSrZ-8PmPCF-2VrcEGFw00l2TIvasaJrzH66bmilwbqNcpIGYEhZGNJ44SxNx4ojj9ctSPngZs89tNde2DYaj6JRbKE0H4lCsxxe6OKTQOYn-XXQD6-g93wLuIQfQcPOR2RN6Mn6NVe0rUcx6P7m27FvmCUxce2SmCoyt9bS8FZFxmS14GDlKdt59Z735fwAtCIyInuWQG4sKlwA0THXGaRcGGXVKfpnayQ");'>
+                            </div>
+                            <div
+                                class="absolute top-4 left-4 bg-black/60 backdrop-blur-md text-white border border-white/20 text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-sm">
                                 Made to Order
                             </div>
-<button class="absolute bottom-4 right-4 size-10 rounded-full bg-white text-black flex items-center justify-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-primary">
-<span class="material-symbols-outlined text-lg">styler</span>
-</button>
-</div>
-<div>
-<h3 class="font-display text-xl font-medium text-white group-hover:text-primary transition-colors">Bespoke Fitting Service</h3>
-<p class="text-text-muted text-xs uppercase tracking-wider mt-1 mb-2">Services</p>
-<p class="text-primary font-medium">Consultation Free</p>
-</div>
-</div>
-<div class="group cursor-pointer">
-<div class="relative aspect-[3/4] overflow-hidden rounded-xl mb-6 bg-background-dark">
-<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC9ZOKbfwfqbpJymlx6weJw2AsdCC2b0SFahHXZHdJtgWgmZATbYbwQbZDPC05nsEN_vALImn4x5o8QTX3jg9TIszqCH4wkbmcBeXunB7h_DSbINtxMV4JvpFlUFY0tapUxhJoB38zFgylWlwIb8JT9FnIPdvuiSApG8OtgdLEjZi5QhBivH1iJQeHpeh7KE_Dw0fC9mIclQxz9OUiV0650xUXtOWAlOviHIqSnaH1DGF-sCJjzO3m-v8r_daWnI21xDKb48tsyF8aX");'></div>
-<button class="absolute bottom-4 right-4 size-10 rounded-full bg-white text-black flex items-center justify-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-primary">
-<span class="material-symbols-outlined text-lg">add_shopping_cart</span>
-</button>
-</div>
-<div>
-<h3 class="font-display text-xl font-medium text-white group-hover:text-primary transition-colors">Velvet Midnight Jacket</h3>
-<p class="text-text-muted text-xs uppercase tracking-wider mt-1 mb-2">Evening Wear</p>
-<p class="text-primary font-medium">$3,200.00</p>
-</div>
-</div>
-</div>
-<div class="mt-12 md:hidden flex justify-center">
-<a class="flex items-center gap-2 text-primary hover:text-white transition-colors" href="#">
-<span class="text-sm font-bold uppercase tracking-wider">View All Products</span>
-<span class="material-symbols-outlined">arrow_forward</span>
-</a>
-</div>
-</div>
-</section>
-<footer class="bg-black border-t border-white/10 pt-20 pb-10 text-white">
-<div class="max-w-7xl mx-auto px-6 lg:px-12">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-<div class="flex flex-col gap-6">
-<div class="flex items-center gap-3">
-<div class="size-6 text-primary">
-<span class="material-symbols-outlined">diamond</span>
-</div>
-<h2 class="text-xl font-display font-bold tracking-widest uppercase text-white">EFEX</h2>
-</div>
-<p class="text-text-muted text-sm leading-relaxed font-light">
-                            Redefining masculine elegance since 2025. We blend heritage tailoring with modern aesthetics for the visionary man.
-                        </p>
-<div class="flex gap-4">
-<a class="size-10 rounded-full border border-gray-700 flex items-center justify-center text-text-muted hover:bg-primary hover:text-black hover:border-primary transition-all" href="#">
-<span class="font-bold text-xs">IG</span>
-</a>
-<a class="size-10 rounded-full border border-gray-700 flex items-center justify-center text-text-muted hover:bg-primary hover:text-black hover:border-primary transition-all" href="#">
-<span class="font-bold text-xs">TW</span>
-</a>
-<a class="size-10 rounded-full border border-gray-700 flex items-center justify-center text-text-muted hover:bg-primary hover:text-black hover:border-primary transition-all" href="#">
-<span class="font-bold text-xs">LI</span>
-</a>
-</div>
-</div>
-<div>
-<h4 class="font-bold text-white mb-6 uppercase tracking-wider text-xs">Services</h4>
-<ul class="flex flex-col gap-4 text-sm text-text-muted font-light">
-<li><a class="hover:text-primary transition-colors" href="./services.html">Bespoke Tailoring</a></li>
-<li><a class="hover:text-primary transition-colors" href="./services.html">Private Styling</a></li>
-<li><a class="hover:text-primary transition-colors" href="./services.html">Wedding Services</a></li>
-<li><a class="hover:text-primary transition-colors" href="./services.html">Corporate Attire</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold text-white mb-6 uppercase tracking-wider text-xs">Support</h4>
-<ul class="flex flex-col gap-4 text-sm text-text-muted font-light">
-<li><a class="hover:text-primary transition-colors" href="#">Order Status</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Returns &amp; Exchanges</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Size Guide</a></li>
-<li><a class="hover:text-primary transition-colors" href="./contact.html">Contact Us</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold text-white mb-6 uppercase tracking-wider text-xs">The Inner Circle</h4>
-<p class="text-text-muted text-sm mb-4 font-light">Subscribe for exclusive drops and private event invitations.</p>
-<div class="flex items-center bg-white/5 rounded-full p-1 pl-4 border border-white/10 focus-within:border-primary transition-colors">
-<input class="bg-transparent border-none text-sm w-full focus:ring-0 placeholder:text-gray-500 text-white" placeholder="Your email" type="email"/>
-<button class="bg-primary hover:bg-primary-light text-black size-10 rounded-full flex items-center justify-center transition-colors shadow-lg shadow-primary/20">
-<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-</button>
-</div>
-</div>
-</div>
-<div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-text-muted font-light">
-<p>© 2025 Efex Luxury. All rights reserved.</p>
-<div class="flex gap-6">
-<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
-<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
-</div>
-</div>
-</div>
-</footer>
-</div>
-</body></html>
+                            <button
+                                class="absolute bottom-4 right-4 size-10 rounded-full bg-white text-black flex items-center justify-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-primary">
+                                <span class="material-symbols-outlined text-lg">styler</span>
+                            </button>
+                        </div>
+                        <div>
+                            <h3
+                                class="font-display text-xl font-medium text-white group-hover:text-primary transition-colors">
+                                Bespoke Fitting Service</h3>
+                            <p class="text-text-muted text-xs uppercase tracking-wider mt-1 mb-2">Services</p>
+                            <p class="text-primary font-medium">Consultation Free</p>
+                        </div>
+                    </div>
+                    <div class="group cursor-pointer">
+                        <div class="relative aspect-[3/4] overflow-hidden rounded-xl mb-6 bg-background-dark">
+                            <div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC9ZOKbfwfqbpJymlx6weJw2AsdCC2b0SFahHXZHdJtgWgmZATbYbwQbZDPC05nsEN_vALImn4x5o8QTX3jg9TIszqCH4wkbmcBeXunB7h_DSbINtxMV4JvpFlUFY0tapUxhJoB38zFgylWlwIb8JT9FnIPdvuiSApG8OtgdLEjZi5QhBivH1iJQeHpeh7KE_Dw0fC9mIclQxz9OUiV0650xUXtOWAlOviHIqSnaH1DGF-sCJjzO3m-v8r_daWnI21xDKb48tsyF8aX");'>
+                            </div>
+                            <button
+                                class="absolute bottom-4 right-4 size-10 rounded-full bg-white text-black flex items-center justify-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 hover:bg-primary">
+                                <span class="material-symbols-outlined text-lg">add_shopping_cart</span>
+                            </button>
+                        </div>
+                        <div>
+                            <h3
+                                class="font-display text-xl font-medium text-white group-hover:text-primary transition-colors">
+                                Velvet Midnight Jacket</h3>
+                            <p class="text-text-muted text-xs uppercase tracking-wider mt-1 mb-2">Evening Wear</p>
+                            <p class="text-primary font-medium">$3,200.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 md:hidden flex justify-center">
+                    <button onclick="window.location.href='./boutique.html'"
+                        class="flex items-center gap-2 text-primary hover:text-white transition-colors">
+                        <span class="text-sm font-bold uppercase tracking-wider">View All Products</span>
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <div id="footer-container"></div>
+    </div>
+    <script src="./js/layout.js"></script>
+</body>
+
+</html>

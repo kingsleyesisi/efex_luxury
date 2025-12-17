@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html class="dark" lang="en">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>The House - Efex Luxury</title>
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <script id="tailwind-config">
         tailwind.config = {
@@ -29,128 +34,48 @@
                         "body": ["Montserrat", "sans-serif"],
                         "sans": ["Spline Sans", "sans-serif"],
                     },
-                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "2xl": "2rem", "full": "9999px"},
+                    borderRadius: { "DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "2xl": "2rem", "full": "9999px" },
                 },
             },
         }
     </script>
-    <style>
-        header.glass-header {
-            background: rgba(10, 10, 10, 0.85);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-        }
-    </style>
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body class="bg-background-dark text-white font-body antialiased selection:bg-primary selection:text-black">
-<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-<header class="glass-header fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 lg:px-12 transition-all">
-    <div class="flex items-center gap-4 text-white z-50">
-        <a class="flex items-center gap-3 group" href="./index.html">
-            <div class="size-8 text-primary">
-                <span class="material-symbols-outlined !text-[32px]">diamond</span>
-            </div>
-            <h2 class="text-2xl font-display font-bold tracking-[0.2em] uppercase text-white">EFEX</h2>
-        </a>
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <div id="header-container"></div>
+        <main class="pt-24 pb-12">
+            <section class="text-center py-20">
+                <h1 class="text-5xl font-display font-bold text-white">The House of Efex</h1>
+                <p class="text-lg text-text-muted mt-4">A legacy of timeless elegance and modern audacity.</p>
+            </section>
+            <section class="max-w-7xl mx-auto px-6 lg:px-12">
+                <div class="w-full h-[500px] bg-cover bg-center rounded-lg"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5u0Zt-BJ2TJs7gxyxVBu8hxcKiDzExo1ah5cHfD0xnOy3kSEnVRQCg0zefYRNaSrT4BAbuVBIzt8whvNNEtnJm_Rw4M0lXG36fn-xI-Vx8wYIT7e9KmC53mmkllXosLIp__FqL-2harO1OIsEvjOJtlvqV8vWjNVZIR_MLok2RgOaw-NRN5FLxuyY8pwkq1K7Q7uDYeAl9go8sy3Fg1uvS7HZ8pJesrJpJKLKZGnj4dfNRYy3_PU7UUxRn-mXxF2MTr0cBmSSBgfE");'>
+                </div>
+            </section>
+            <section class="max-w-5xl mx-auto px-6 lg:px-12 py-20">
+                <div class="text-center">
+                    <h2 class="text-4xl font-display font-bold text-primary">Our Heritage</h2>
+                    <p class="text-text-muted mt-4 leading-relaxed">Founded on the principles of unparalleled
+                        craftsmanship and a forward-thinking aesthetic, Efex Luxury is more than a brand; it’s a
+                        statement. We believe that true style is a personal expression, a quiet confidence that emanates
+                        from wearing something exquisitely made. Our collections are designed for the modern
+                        trailblazer—the man who respects tradition but is not bound by it.</p>
+                </div>
+                <div class="text-center mt-16">
+                    <h2 class="text-4xl font-display font-bold text-primary">Our Values</h2>
+                    <p class="text-text-muted mt-4 leading-relaxed">We are committed to using only the finest materials,
+                        sourced from the most reputable mills in the world. Our dedication to quality is matched by our
+                        commitment to ethical and sustainable practices. At Efex Luxury, we are not just creating
+                        clothes; we are crafting a legacy of responsible luxury.</p>
+                </div>
+            </section>
+        </main>
+        <div id="footer-container"></div>
     </div>
-    <nav class="hidden lg:flex flex-1 justify-center gap-10 text-white/90">
-        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./boutique.html">The Boutique</a>
-        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./gallery.html">Gallery</a>
-        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./services.html">Services</a>
-        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./the-house.html">The House</a>
-        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./journal.html">Journal</a>
-        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./about.html">About Us</a>
-        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./contact.html">Contact</a>
-    </nav>
-    <div class="flex items-center gap-4 z-50 text-white">
-        <button class="lg:hidden flex size-10 items-center justify-center rounded-full hover:bg-white/10 text-white">
-            <span class="material-symbols-outlined text-[20px]">menu</span>
-        </button>
-    </div>
-</header>
-<main class="pt-24 pb-12">
-    <section class="text-center py-20">
-        <h1 class="text-5xl font-display font-bold text-white">The House of Efex</h1>
-        <p class="text-lg text-text-muted mt-4">A legacy of timeless elegance and modern audacity.</p>
-    </section>
-    <section class="max-w-7xl mx-auto px-6 lg:px-12">
-        <div class="w-full h-[500px] bg-cover bg-center rounded-lg" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5u0Zt-BJ2TJs7gxyxVBu8hxcKiDzExo1ah5cHfD0xnOy3kSEnVRQCg0zefYRNaSrT4BAbuVBIzt8whvNNEtnJm_Rw4M0lXG36fn-xI-Vx8wYIT7e9KmC53mmkllXosLIp__FqL-2harO1OIsEvjOJtlvqV8vWjNVZIR_MLok2RgOaw-NRN5FLxuyY8pwkq1K7Q7uDYeAl9go8sy3Fg1uvS7HZ8pJesrJpJKLKZGnj4dfNRYy3_PU7UUxRn-mXxF2MTr0cBmSSBgfE");'></div>
-    </section>
-    <section class="max-w-5xl mx-auto px-6 lg:px-12 py-20">
-        <div class="text-center">
-            <h2 class="text-4xl font-display font-bold text-primary">Our Heritage</h2>
-            <p class="text-text-muted mt-4 leading-relaxed">Founded on the principles of unparalleled craftsmanship and a forward-thinking aesthetic, Efex Luxury is more than a brand; it’s a statement. We believe that true style is a personal expression, a quiet confidence that emanates from wearing something exquisitely made. Our collections are designed for the modern trailblazer—the man who respects tradition but is not bound by it.</p>
-        </div>
-        <div class="text-center mt-16">
-            <h2 class="text-4xl font-display font-bold text-primary">Our Values</h2>
-            <p class="text-text-muted mt-4 leading-relaxed">We are committed to using only the finest materials, sourced from the most reputable mills in the world. Our dedication to quality is matched by our commitment to ethical and sustainable practices. At Efex Luxury, we are not just creating clothes; we are crafting a legacy of responsible luxury.</p>
-        </div>
-    </section>
-</main>
-<footer class="bg-black border-t border-white/10 pt-20 pb-10 text-white">
-<div class="max-w-7xl mx-auto px-6 lg:px-12">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-<div class="flex flex-col gap-6">
-<div class="flex items-center gap-3">
-<div class="size-6 text-primary">
-<span class="material-symbols-outlined">diamond</span>
-</div>
-<h2 class="text-xl font-display font-bold tracking-widest uppercase text-white">EFEX</h2>
-</div>
-<p class="text-text-muted text-sm leading-relaxed font-light">
-                            Redefining masculine elegance since 2025. We blend heritage tailoring with modern aesthetics for the visionary man.
-                        </p>
-<div class="flex gap-4">
-<a class="size-10 rounded-full border border-gray-700 flex items-center justify-center text-text-muted hover:bg-primary hover:text-black hover:border-primary transition-all" href="#">
-<span class="font-bold text-xs">IG</span>
-</a>
-<a class="size-10 rounded-full border border-gray-700 flex items-center justify-center text-text-muted hover:bg-primary hover:text-black hover:border-primary transition-all" href="#">
-<span class="font-bold text-xs">TW</span>
-</a>
-<a class="size-10 rounded-full border border-gray-700 flex items-center justify-center text-text-muted hover:bg-primary hover:text-black hover:border-primary transition-all" href="#">
-<span class="font-bold text-xs">LI</span>
-</a>
-</div>
-</div>
-<div>
-<h4 class="font-bold text-white mb-6 uppercase tracking-wider text-xs">Services</h4>
-<ul class="flex flex-col gap-4 text-sm text-text-muted font-light">
-<li><a class="hover:text-primary transition-colors" href="./services.html">Bespoke Tailoring</a></li>
-<li><a class="hover:text-primary transition-colors" href="./services.html">Private Styling</a></li>
-<li><a class="hover:text-primary transition-colors" href="./services.html">Wedding Services</a></li>
-<li><a class="hover:text-primary transition-colors" href="./services.html">Corporate Attire</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold text-white mb-6 uppercase tracking-wider text-xs">Support</h4>
-<ul class="flex flex-col gap-4 text-sm text-text-muted font-light">
-<li><a class="hover:text-primary transition-colors" href="#">Order Status</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Returns &amp; Exchanges</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Size Guide</a></li>
-<li><a class="hover:text-primary transition-colors" href="./contact.html">Contact Us</a></li>
-</ul>
-</div>
-<div>
-<h4 class="font-bold text-white mb-6 uppercase tracking-wider text-xs">The Inner Circle</h4>
-<p class="text-text-muted text-sm mb-4 font-light">Subscribe for exclusive drops and private event invitations.</p>
-<div class="flex items-center bg-white/5 rounded-full p-1 pl-4 border border-white/10 focus-within:border-primary transition-colors">
-<input class="bg-transparent border-none text-sm w-full focus:ring-0 placeholder:text-gray-500 text-white" placeholder="Your email" type="email"/>
-<button class="bg-primary hover:bg-primary-light text-black size-10 rounded-full flex items-center justify-center transition-colors shadow-lg shadow-primary/20">
-<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
-</button>
-</div>
-</div>
-</div>
-<div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-text-muted font-light">
-<p>© 2025 Efex Luxury. All rights reserved.</p>
-<div class="flex gap-6">
-<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
-<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
-</div>
-</div>
-</div>
-</footer>
-</div>
+    <script src="./js/layout.js"></script>
 </body>
+
 </html>
