@@ -46,35 +46,39 @@
 </head>
 <body class="font-body bg-background-dark text-text-main antialiased selection:bg-primary selection:text-black">
 <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
-<header class="fixed top-0 z-50 w-full transition-all duration-300 bg-background-dark/80 backdrop-blur-lg border-b border-white/5">
-<div class="flex items-center justify-between px-6 lg:px-12 py-5 max-w-[1440px] mx-auto w-full">
-<div class="flex items-center gap-3">
-<div class="text-primary">
-<svg class="w-8 h-8" fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 6H42L36 24L42 42H6L12 24L6 6Z"></path>
-</svg>
-</div>
-<div class="flex flex-col">
-<h2 class="font-display text-xl font-bold tracking-widest uppercase text-white leading-none">Efex</h2>
-<span class="text-[0.6rem] uppercase tracking-[0.3em] text-primary">Luxury</span>
-</div>
-</div>
-<nav class="hidden md:flex flex-1 justify-end gap-10 items-center">
-<div class="flex items-center gap-8">
-<a class="text-xs font-medium uppercase tracking-widest text-text-muted hover:text-primary transition-colors duration-300" href="gallery.html">Gallery</a>
-<a class="text-xs font-medium uppercase tracking-widest text-text-muted hover:text-primary transition-colors duration-300" href="boutique.html">Boutique</a>
-<a class="text-xs font-medium uppercase tracking-widest text-text-muted hover:text-primary transition-colors duration-300" href="about.html">About</a>
-<a class="text-xs font-medium uppercase tracking-widest text-text-muted hover:text-primary transition-colors duration-300" href="contact.html">Contact</a>
-</div>
-<button class="flex items-center gap-2 border border-primary/30 px-6 py-2.5 rounded-sm hover:bg-primary hover:text-black transition-all duration-300 group">
-<span class="text-xs font-bold uppercase tracking-widest">Book Fitting</span>
-<span class="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1">arrow_forward</span>
-</button>
-</nav>
-<button class="md:hidden text-white hover:text-primary transition-colors">
-<span class="material-symbols-outlined text-3xl">menu</span>
-</button>
-</div>
+<header class="glass-header fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 lg:px-12 transition-all">
+    <div class="flex items-center gap-4 text-white z-50">
+        <a class="flex items-center gap-3 group" href="./index.html">
+            <div class="size-8 text-primary">
+                <span class="material-symbols-outlined !text-[32px]">diamond</span>
+            </div>
+            <h2 class="text-2xl font-display font-bold tracking-[0.2em] uppercase text-white">EFEX</h2>
+        </a>
+    </div>
+    <nav class="hidden lg:flex flex-1 justify-center gap-10 text-white/90">
+        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./boutique.html">The Boutique</a>
+        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./gallery.html">Gallery</a>
+        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./services.html">Services</a>
+        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./the-house.html">The House</a>
+        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./journal.html">Journal</a>
+        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./about.html">About Us</a>
+        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./contact.html">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4 z-50 text-white">
+        <button class="flex size-10 items-center justify-center rounded-full hover:bg-white/10 hover:text-primary transition-colors">
+            <span class="material-symbols-outlined text-[20px]">search</span>
+        </button>
+        <button class="flex size-10 items-center justify-center rounded-full hover:bg-white/10 hover:text-primary transition-colors">
+            <span class="material-symbols-outlined text-[20px]">person</span>
+        </button>
+        <button class="flex size-10 items-center justify-center rounded-full hover:bg-white/10 hover:text-primary transition-colors relative">
+            <span class="material-symbols-outlined text-[20px]">shopping_bag</span>
+            <span class="absolute top-1 right-1 size-2 bg-primary rounded-full border border-background-dark"></span>
+        </button>
+        <button class="lg:hidden flex size-10 items-center justify-center rounded-full hover:bg-white/10 text-white">
+            <span class="material-symbols-outlined text-[20px]">menu</span>
+        </button>
+    </div>
 </header>
 <main class="relative pt-24 pb-12">
 <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-radial from-primary/5 to-transparent opacity-50 blur-3xl pointer-events-none"></div>
@@ -92,13 +96,9 @@
                             Where celestial wonder meets sartorial precision. A limited edition series inspired by the infinite depth of the cosmos.
                         </p>
 <div class="flex flex-col sm:flex-row gap-6">
-<button class="bg-primary text-black px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-white transition-colors duration-300">
-                                View Lookbook
-                            </button>
-<button class="flex items-center gap-3 px-8 py-4 text-sm font-bold uppercase tracking-widest text-white border border-white/20 hover:border-white transition-colors duration-300">
-<span class="material-symbols-outlined text-lg">play_arrow</span>
-                                Watch Film
-                            </button>
+    <button class="bg-primary text-black px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-white transition-colors duration-300">
+        View Lookbook
+    </button>
 </div>
 <div class="mt-16 grid grid-cols-3 gap-8 border-t border-white/10 pt-8 w-full max-w-lg">
 <div>
@@ -269,55 +269,69 @@
 <button class="bg-primary text-black px-10 py-4 text-sm font-bold uppercase tracking-widest hover:bg-white transition-colors duration-300 min-w-[200px]">
                         Book Appointment
                     </button>
-<button class="bg-transparent border border-white text-white px-10 py-4 text-sm font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-colors duration-300 min-w-[200px]">
-                        Download Lookbook
-                    </button>
 </div>
 </div>
 </section>
-<footer class="bg-black text-white py-20 border-t border-white/10">
-<div class="max-w-[1440px] mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between gap-12">
-<div class="flex flex-col gap-6 md:w-1/3">
-<div class="flex items-center gap-2">
-<span class="text-2xl font-display font-bold">Efex Luxury</span>
-</div>
-<p class="text-gray-500 text-sm leading-relaxed max-w-xs font-light">
-                        Redefining the standard for the modern gentleman through bespoke craftsmanship and celestial inspiration.
-                    </p>
-<div class="flex gap-4 mt-4">
-<a class="text-gray-400 hover:text-primary transition-colors" href="#"><i class="material-symbols-outlined">mail</i></a>
-<a class="text-gray-400 hover:text-primary transition-colors" href="#"><i class="material-symbols-outlined">call</i></a>
-<a class="text-gray-400 hover:text-primary transition-colors" href="#"><i class="material-symbols-outlined">location_on</i></a>
-</div>
-</div>
-<div class="flex flex-wrap gap-16 md:justify-end md:w-2/3">
+<footer class="bg-black border-t border-white/10 pt-20 pb-10 text-white">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
 <div class="flex flex-col gap-6">
-<h3 class="font-bold text-xs text-primary uppercase tracking-[0.15em]">Collection</h3>
-<a class="text-sm text-gray-400 hover:text-white transition-colors" href="#">Suits</a>
-<a class="text-sm text-gray-400 hover:text-white transition-colors" href="#">Jackets</a>
-<a class="text-sm text-gray-400 hover:text-white transition-colors" href="#">Trousers</a>
-<a class="text-sm text-gray-400 hover:text-white transition-colors" href="#">Accessories</a>
+<div class="flex items-center gap-3">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined">diamond</span>
 </div>
-<div class="flex flex-col gap-6">
-<h3 class="font-bold text-xs text-primary uppercase tracking-[0.15em]">Experience</h3>
-<a class="text-sm text-gray-400 hover:text-white transition-colors" href="#">The Atelier</a>
-<a class="text-sm text-gray-400 hover:text-white transition-colors" href="#">Bespoke Process</a>
-<a class="text-sm text-gray-400 hover:text-white transition-colors" href="#">Styling Services</a>
-<a class="text-sm text-gray-400 hover:text-white transition-colors" href="#">Appointments</a>
+<h2 class="text-xl font-display font-bold tracking-widest uppercase text-white">EFEX</h2>
 </div>
-<div class="flex flex-col gap-6">
-<h3 class="font-bold text-xs text-primary uppercase tracking-[0.15em]">Connect</h3>
-<a class="text-sm text-gray-400 hover:text-white transition-colors" href="#">Instagram</a>
-<a class="text-sm text-gray-400 hover:text-white transition-colors" href="#">LinkedIn</a>
-<a class="text-sm text-gray-400 hover:text-white transition-colors" href="#">Journal</a>
+<p class="text-text-muted text-sm leading-relaxed font-light">
+                            Redefining masculine elegance since 2025. We blend heritage tailoring with modern aesthetics for the visionary man.
+                        </p>
+<div class="flex gap-4">
+<a class="size-10 rounded-full border border-gray-700 flex items-center justify-center text-text-muted hover:bg-primary hover:text-black hover:border-primary transition-all" href="#">
+<span class="font-bold text-xs">IG</span>
+</a>
+<a class="size-10 rounded-full border border-gray-700 flex items-center justify-center text-text-muted hover:bg-primary hover:text-black hover:border-primary transition-all" href="#">
+<span class="font-bold text-xs">TW</span>
+</a>
+<a class="size-10 rounded-full border border-gray-700 flex items-center justify-center text-text-muted hover:bg-primary hover:text-black hover:border-primary transition-all" href="#">
+<span class="font-bold text-xs">LI</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-white mb-6 uppercase tracking-wider text-xs">Services</h4>
+<ul class="flex flex-col gap-4 text-sm text-text-muted font-light">
+<li><a class="hover:text-primary transition-colors" href="./services.html">Bespoke Tailoring</a></li>
+<li><a class="hover:text-primary transition-colors" href="./services.html">Private Styling</a></li>
+<li><a class="hover:text-primary transition-colors" href="./services.html">Wedding Services</a></li>
+<li><a class="hover:text-primary transition-colors" href="./services.html">Corporate Attire</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-white mb-6 uppercase tracking-wider text-xs">Support</h4>
+<ul class="flex flex-col gap-4 text-sm text-text-muted font-light">
+<li><a class="hover:text-primary transition-colors" href="#">Order Status</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Returns &amp; Exchanges</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Size Guide</a></li>
+<li><a class="hover:text-primary transition-colors" href="./contact.html">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-white mb-6 uppercase tracking-wider text-xs">The Inner Circle</h4>
+<p class="text-text-muted text-sm mb-4 font-light">Subscribe for exclusive drops and private event invitations.</p>
+<div class="flex items-center bg-white/5 rounded-full p-1 pl-4 border border-white/10 focus-within:border-primary transition-colors">
+<input class="bg-transparent border-none text-sm w-full focus:ring-0 placeholder:text-gray-500 text-white" placeholder="Your email" type="email"/>
+<button class="bg-primary hover:bg-primary-light text-black size-10 rounded-full flex items-center justify-center transition-colors shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
 </div>
 </div>
 </div>
-<div class="max-w-[1440px] mx-auto px-6 lg:px-12 mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
-<p>© 2023 Efex Luxury. All rights reserved.</p>
-<div class="flex gap-6 mt-4 md:mt-0">
+<div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-text-muted font-light">
+<p>© 2025 Efex Luxury. All rights reserved.</p>
+<div class="flex gap-6">
 <a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
 <a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
 </div>
 </div>
 </footer>

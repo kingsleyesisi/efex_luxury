@@ -4,12 +4,181 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Contact Us - Efex Luxury</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D4AF37",
+                        "primary-dark": "#B59230",
+                        "primary-light": "#F3D98B",
+                        "background-light": "#ffffff",
+                        "background-dark": "#0a0a0a",
+                        "background-card": "#121212",
+                        "text-main": "#FFFFFF",
+                        "text-muted": "#A1A1AA",
+                    },
+                    fontFamily: {
+                        "display": ["Playfair Display", "serif"],
+                        "body": ["Montserrat", "sans-serif"],
+                        "sans": ["Spline Sans", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "2xl": "2rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+    <style>
+        header.glass-header {
+            background: rgba(10, 10, 10, 0.85);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+    </style>
 </head>
 <body class="bg-background-dark text-white font-body antialiased selection:bg-primary selection:text-black">
-    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden items-center justify-center">
-        <h1 class="text-4xl font-display">Contact Us - Coming Soon</h1>
-        <a href="/" class="mt-4 text-primary hover:underline">Go back to Home</a>
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<header class="glass-header fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 lg:px-12 transition-all">
+    <div class="flex items-center gap-4 text-white z-50">
+        <a class="flex items-center gap-3 group" href="./index.html">
+            <div class="size-8 text-primary">
+                <span class="material-symbols-outlined !text-[32px]">diamond</span>
+            </div>
+            <h2 class="text-2xl font-display font-bold tracking-[0.2em] uppercase text-white">EFEX</h2>
+        </a>
     </div>
+    <nav class="hidden lg:flex flex-1 justify-center gap-10 text-white/90">
+        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./boutique.html">The Boutique</a>
+        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./gallery.html">Gallery</a>
+        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./services.html">Services</a>
+        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./the-house.html">The House</a>
+        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./journal.html">Journal</a>
+        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./about.html">About Us</a>
+        <a class="text-xs font-bold tracking-widest uppercase hover:text-primary transition-colors py-6" href="./contact.html">Contact</a>
+    </nav>
+    <div class="flex items-center gap-4 z-50 text-white">
+        <button class="lg:hidden flex size-10 items-center justify-center rounded-full hover:bg-white/10 text-white">
+            <span class="material-symbols-outlined text-[20px]">menu</span>
+        </button>
+    </div>
+</header>
+<main class="pt-24 pb-12">
+    <div class="max-w-[1000px] mx-auto px-6 lg:px-12 w-full">
+        <div class="text-center my-16">
+            <h1 class="font-display text-5xl md:text-7xl font-bold text-white mb-4">Contact Us</h1>
+            <p class="text-text-muted text-lg max-w-xl mx-auto font-light">We welcome your inquiries. Reach out to us for appointments, consultations, or any questions you may have.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 bg-background-card p-10 rounded-lg border border-white/10">
+            <div>
+                <h2 class="font-display text-3xl text-primary mb-6">Get in Touch</h2>
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="text-xs font-bold uppercase text-text-muted">Full Name</label>
+                        <input type="text" name="name" id="name" class="w-full bg-transparent border-b border-white/20 focus:border-primary focus:ring-0 transition mt-2">
+                    </div>
+                    <div>
+                        <label for="email" class="text-xs font-bold uppercase text-text-muted">Email Address</label>
+                        <input type="email" name="email" id="email" class="w-full bg-transparent border-b border-white/20 focus:border-primary focus:ring-0 transition mt-2">
+                    </div>
+                    <div>
+                        <label for="message" class="text-xs font-bold uppercase text-text-muted">Message</label>
+                        <textarea name="message" id="message" rows="4" class="w-full bg-transparent border-b border-white/20 focus:border-primary focus:ring-0 transition mt-2"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-primary text-black font-bold uppercase tracking-widest py-3 rounded-md hover:bg-primary-light transition-colors">Send Message</button>
+                </form>
+            </div>
+            <div class="flex flex-col justify-between">
+                <div>
+                    <h3 class="font-display text-xl text-white mb-4">Contact Information</h3>
+                    <div class="space-y-4 text-text-muted">
+                        <p class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">location_on</span> 123 Luxury Lane, Mayfair, London</p>
+                        <p class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">call</span> +44 20 7123 4567</p>
+                        <p class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">mail</span> concierge@efexluxury.com</p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="font-display text-xl text-white mb-4">Opening Hours</h3>
+                    <div class="text-text-muted">
+                        <p>Monday - Friday: 10am - 6pm</p>
+                        <p>Saturday: By Appointment</p>
+                        <p>Sunday: Closed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="bg-black border-t border-white/10 pt-20 pb-10 text-white">
+<div class="max-w-7xl mx-auto px-6 lg:px-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<div class="size-6 text-primary">
+<span class="material-symbols-outlined">diamond</span>
+</div>
+<h2 class="text-xl font-display font-bold tracking-widest uppercase text-white">EFEX</h2>
+</div>
+<p class="text-text-muted text-sm leading-relaxed font-light">
+                            Redefining masculine elegance since 2025. We blend heritage tailoring with modern aesthetics for the visionary man.
+                        </p>
+<div class="flex gap-4">
+<a class="size-10 rounded-full border border-gray-700 flex items-center justify-center text-text-muted hover:bg-primary hover:text-black hover:border-primary transition-all" href="#">
+<span class="font-bold text-xs">IG</span>
+</a>
+<a class="size-10 rounded-full border border-gray-700 flex items-center justify-center text-text-muted hover:bg-primary hover:text-black hover:border-primary transition-all" href="#">
+<span class="font-bold text-xs">TW</span>
+</a>
+<a class="size-10 rounded-full border border-gray-700 flex items-center justify-center text-text-muted hover:bg-primary hover:text-black hover:border-primary transition-all" href="#">
+<span class="font-bold text-xs">LI</span>
+</a>
+</div>
+</div>
+<div>
+<h4 class="font-bold text-white mb-6 uppercase tracking-wider text-xs">Services</h4>
+<ul class="flex flex-col gap-4 text-sm text-text-muted font-light">
+<li><a class="hover:text-primary transition-colors" href="./services.html">Bespoke Tailoring</a></li>
+<li><a class="hover:text-primary transition-colors" href="./services.html">Private Styling</a></li>
+<li><a class="hover:text-primary transition-colors" href="./services.html">Wedding Services</a></li>
+<li><a class="hover:text-primary transition-colors" href="./services.html">Corporate Attire</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-white mb-6 uppercase tracking-wider text-xs">Support</h4>
+<ul class="flex flex-col gap-4 text-sm text-text-muted font-light">
+<li><a class="hover:text-primary transition-colors" href="#">Order Status</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Returns &amp; Exchanges</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Size Guide</a></li>
+<li><a class="hover:text-primary transition-colors" href="./contact.html">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-white mb-6 uppercase tracking-wider text-xs">The Inner Circle</h4>
+<p class="text-text-muted text-sm mb-4 font-light">Subscribe for exclusive drops and private event invitations.</p>
+<div class="flex items-center bg-white/5 rounded-full p-1 pl-4 border border-white/10 focus-within:border-primary transition-colors">
+<input class="bg-transparent border-none text-sm w-full focus:ring-0 placeholder:text-gray-500 text-white" placeholder="Your email" type="email"/>
+<button class="bg-primary hover:bg-primary-light text-black size-10 rounded-full flex items-center justify-center transition-colors shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-text-muted font-light">
+<p>© 2025 Efex Luxury. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
 </body>
 </html>
