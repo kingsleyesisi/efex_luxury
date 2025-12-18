@@ -78,13 +78,67 @@ header.glass-header {
 
 #mobile-menu-overlay.flex {
     opacity: 1;
+}
 
-    /* Utilities from boutique.html */
-    .text-shadow-gold {
-        text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
-    }
+/* Premium Utilities */
+.text-shadow-gold {
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
 
-    .text-shadow-sm {
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+.text-shadow-sm {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.pulse-animation {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
     }
+    50% {
+        opacity: 0.5;
+        transform: scale(1.1);
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 8s ease-in-out infinite;
+}
+
+@keyframes pulse-slow {
+    0%, 100% { opacity: 0.8; transform: scale(1.02); }
+    50% { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gold-border-gradient {
+    border-image: linear-gradient(to right, #D4AF37, #F3D98B, #D4AF37) 1;
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.luxury-scarcity-badge {
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+    border: 1px solid rgba(212, 175, 55, 0.3);
 }

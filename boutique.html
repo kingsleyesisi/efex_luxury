@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>The Galaxy Collection - Efex Luxury</title>
+    <title>The Sovereign Drop - Efex Luxury</title>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
@@ -20,21 +20,16 @@
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#D4AF37", // Metallic Gold
-                        "primary-hover": "#B5952F",
-                        "background-dark": "#0a0a0a", // Deep Charcoal/Black
+                        "primary": "#D4AF37",
+                        "background-dark": "#0a0a0a",
                         "surface-dark": "#141414",
                         "text-main": "#FFFFFF",
-                        "text-muted": "#A1A1AA", // Zinc 400
-                        "accent-white": "#F8F8F8",
+                        "text-muted": "#A1A1AA",
                     },
                     fontFamily: {
                         "display": ["Playfair Display", "serif"],
                         "body": ["Montserrat", "sans-serif"]
                     },
-                    backgroundImage: {
-                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-                    }
                 },
             },
         }
@@ -42,235 +37,150 @@
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
-<body class="font-body bg-background-dark text-text-main antialiased selection:bg-primary selection:text-black">
-    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<body class="bg-background-dark text-white font-body antialiased selection:bg-primary selection:text-black">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
         <div id="header-container"></div>
+
         <main class="relative pt-24 pb-12">
-            <div
-                class="absolute top-0 right-0 w-1/2 h-full bg-gradient-radial from-primary/5 to-transparent opacity-50 blur-3xl pointer-events-none">
-            </div>
+            <!-- Hero -->
             <div class="max-w-[1440px] mx-auto px-6 lg:px-12 w-full">
                 <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 min-h-[80vh]">
                     <div class="flex flex-col items-start lg:w-1/2 z-10 animate-fade-in-up">
                         <div class="flex items-center gap-4 mb-6">
                             <span class="h-[1px] w-12 bg-primary"></span>
-                            <span class="text-primary font-bold tracking-[0.2em] uppercase text-xs">New Arrival</span>
+                            <span class="text-primary font-bold tracking-[0.2em] uppercase text-xs">The 2025 Drop</span>
                         </div>
                         <h1
                             class="font-display text-5xl md:text-7xl lg:text-8xl font-medium leading-[1] tracking-tight mb-8 text-white">
-                            The <span class="text-primary italic font-serif pr-2">Galaxy</span><br /> Collection
+                            The <span class="text-primary italic font-serif pr-2">Sovereign</span><br /> Drop
                         </h1>
                         <p
                             class="font-body text-text-muted text-lg font-light leading-relaxed max-w-md mb-10 border-l border-white/10 pl-6">
-                            Where celestial wonder meets sartorial precision. A limited edition series inspired by the
-                            infinite depth of the cosmos.
+                            Exclusive limited-run collections for the Nigerian visionary. Curated by occasion to ensure
+                            you command every room.
                         </p>
-                        <a href="gallery.html" class="flex flex-col sm:flex-row gap-6">
+                        <div class="flex flex-col sm:flex-row gap-6">
                             <button
-                                class="bg-primary text-black px-8 py-4 text-sm font-bold uppercase tracking-widest hover:bg-white transition-colors duration-300">
-                                View Lookbook
+                                onclick="window.location.href='./contact.html?subject=Reserve%20The%20Sovereign%20Collection'"
+                                class="bg-primary text-black px-10 py-5 text-xs font-bold uppercase tracking-widest hover:bg-white transition-all duration-300">
+                                Reserve for Fitting
                             </button>
-                        </a>
-                        <div class="mt-16 grid grid-cols-3 gap-8 border-t border-white/10 pt-8 w-full max-w-lg">
-                            <div>
-                                <span class="block font-display text-3xl text-white mb-1">12</span>
-                                <span class="text-xs uppercase tracking-widest text-text-muted">Exclusive Looks</span>
-                            </div>
-                            <div>
-                                <span class="block font-display text-3xl text-white mb-1">100%</span>
-                                <span class="text-xs uppercase tracking-widest text-text-muted">Italian Silk</span>
-                            </div>
-                            <div>
-                                <span class="block font-display text-3xl text-white mb-1">01</span>
-                                <span class="text-xs uppercase tracking-widest text-text-muted">Master Tailor</span>
-                            </div>
+                            <button
+                                onclick="window.open('https://wa.me/234XXXXXXXXXX?text=I%20want%20to%20see%20the%20latest%20drop.', '_blank')"
+                                class="border border-white/20 text-white px-10 py-5 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-300">
+                                WhatsApp Catalog
+                            </button>
                         </div>
                     </div>
-                    <div class="relative lg:w-1/2 h-[600px] lg:h-[800px] w-full group overflow-hidden">
-                        <div class="absolute inset-0 bg-primary/10 z-10 mix-blend-overlay"></div>
-                        <div class="w-full h-full bg-cover bg-center transition-transform duration-1000 group-hover:scale-105"
-                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAiO5ytL7mVSvV2HEUn7y-r3O08uXMegqmjsH6gcLJkFNZa2ed-m9XHr5zZPUn2QPEioN8-_gwlWllj_B-LCsODoEGaMTmtkOM7o4n7V1WjCGg1abftx37YV-IrTP1HRjkoXq4vFV7PiXB2dHs4v00RYv8qyFanjCvrrB__UJuDxTqgKdXozWi-P4gSw09fLcqU_nxMP57ZN7Vj9UQyzWv10KXcxlIcRhKF4EH7SVKDqirrqgOKXvyI7D-X5WRhvUE_EqKW7wxM5AtK");'
-                            title="Close up of fabric texture">
-                        </div>
+                    <div class="relative lg:w-1/2 h-[600px] w-full rounded-2xl overflow-hidden glass-card p-1">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiO5ytL7mVSvV2HEUn7y-r3O08uXMegqmjsH6gcLJkFNZa2ed-m9XHr5zZPUn2QPEioN8-_gwlWllj_B-LCsODoEGaMTmtkOM7o4n7V1WjCGg1abftx37YV-IrTP1HRjkoXq4vFV7PiXB2dHs4v00RYv8qyFanjCvrrB__UJuDxTqgKdXozWi-P4gSw09fLcqU_nxMP57ZN7Vj9UQyzWv10KXcxlIcRhKF4EH7SVKDqirrqgOKXvyI7D-X5WRhvUE_EqKW7wxM5AtK"
+                            alt="Hero Piece"
+                            class="w-full h-full object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-1000">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Occasion Sections -->
+            <section class="py-24 bg-background-dark border-t border-white/5">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div class="text-center mb-24">
+                        <h2 class="font-display text-4xl text-white">Occasions of Excellence</h2>
+                        <p class="text-text-muted text-sm mt-4 font-light uppercase tracking-widest">Choose Your Arena
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                        <!-- Occasions cards with direct action -->
                         <div
-                            class="absolute bottom-8 right-8 z-20 bg-black/80 backdrop-blur-md p-6 border border-white/10 max-w-xs">
-                            <p class="font-display text-xl text-white mb-2">Midnight Weave</p>
-                            <p class="text-xs text-text-muted leading-relaxed">Hand-woven fabric incorporating
-                                microscopic gold threads to mimic distant stars.</p>
+                            class="group relative overflow-hidden rounded-3xl bg-surface-dark border border-white/5 hover:border-primary/50 transition-all duration-700">
+                            <div class="aspect-[3/4] overflow-hidden">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAscGSnCoARExnG9tDNY536QpPWH4IiLnx_ypvkSnJXx4RLhJpjUj33i6aRF8h412Gajo7mYBbnGt8xqFSWL3lPdA7as_BP_dFR-KV0hqh-jET6FCHNa8nOY46zm9eOWptrzRuHe5eAzCbaApc0Ith8iKAYXyb6z0kYrg40KxX7mgG78mLbtqYU9V1W-iHp9AmZ0k2F8e0tGpBWo4KfvNkT3SDEwtwxJmTJg6-Xwvz_QIxK-BBWieN6yq4xKnUrSQEyAMOZYyNClOD"
+                                    alt="Boardroom"
+                                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                            <div class="absolute bottom-10 left-10 right-10">
+                                <h3 class="font-display text-4xl text-white mb-4">Boardroom</h3>
+                                <p class="text-text-muted text-xs uppercase tracking-widest font-bold mb-8">Power.
+                                    Precision. Prestige.</p>
+                                <button
+                                    onclick="window.open('https://wa.me/234XXXXXXXXXX?text=Tell%20me%20about%20your%20Boardroom%20collection.', '_blank')"
+                                    class="w-full py-4 bg-primary text-black text-[10px] font-bold uppercase tracking-[0.4em] hover:bg-white transition-all">WhatsApp
+                                    Inquiry</button>
+                            </div>
+                        </div>
+
+                        <div
+                            class="group relative overflow-hidden rounded-3xl bg-surface-dark border border-white/5 hover:border-primary/50 transition-all duration-700">
+                            <div class="aspect-[3/4] overflow-hidden">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiO5ytL7mVSvV2HEUn7y-r3O08uXMegqmjsH6gcLJkFNZa2ed-m9XHr5zZPUn2QPEioN8-_gwlWllj_B-LCsODoEGaMTmtkOM7o4n7V1WjCGg1abftx37YV-IrTP1HRjkoXq4vFV7PiXB2dHs4v00RYv8qyFanjCvrrB__UJuDxTqgKdXozWi-P4gSw09fLcqU_nxMP57ZN7Vj9UQyzWv10KXcxlIcRhKF4EH7SVKDqirrqgOKXvyI7D-X5WRhvUE_EqKW7wxM5AtK"
+                                    alt="Ceremony"
+                                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                            <div class="absolute bottom-10 left-10 right-10">
+                                <h3 class="font-display text-4xl text-white mb-4">Ceremony</h3>
+                                <p class="text-text-muted text-xs uppercase tracking-widest font-bold mb-8">Weddings.
+                                    Galas. State Events.</p>
+                                <button
+                                    onclick="window.open('https://wa.me/234XXXXXXXXXX?text=Tell%20me%20about%20your%20Ceremony%20collection.', '_blank')"
+                                    class="w-full py-4 bg-primary text-black text-[10px] font-bold uppercase tracking-[0.4em] hover:bg-white transition-all">WhatsApp
+                                    Inquiry</button>
+                            </div>
+                        </div>
+
+                        <div
+                            class="group relative overflow-hidden rounded-3xl bg-surface-dark border border-white/5 hover:border-primary/50 transition-all duration-700">
+                            <div class="aspect-[3/4] overflow-hidden">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC66r2gtIqRiO_vJrWPe94nwEgzPaWecYQwF0W63ou6yzCxGzslL7r2ApwYWqtllDK_uSkGDCsGsPi6l82NHdlFfIaWBGLJh6qsIzAI6_sCKLSbn9eED6PHbY3_mNH0rKIQg4rJhq-o9TbTwCpvbIg0WY9Mnjt5dM-3dBA2yiy_MfG2dTXjY0Myt3GVWE5UAceVeljVUDKYmtOe-3BH4alpN_jX4VdUWyLKafoW1VTvgMGHISCTAgfP7jHMHaAHqjKu89ZXR017-025"
+                                    alt="Leisure"
+                                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000">
+                            </div>
+                            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"></div>
+                            <div class="absolute bottom-10 left-10 right-10">
+                                <h3 class="font-display text-4xl text-white mb-4">Leisure</h3>
+                                <p class="text-text-muted text-xs uppercase tracking-widest font-bold mb-8">Polished.
+                                    Relaxed. Sovereign.</p>
+                                <button
+                                    onclick="window.open('https://wa.me/234XXXXXXXXXX?text=Tell%20me%20about%20your%20Leisure%20collection.', '_blank')"
+                                    class="w-full py-4 bg-primary text-black text-[10px] font-bold uppercase tracking-[0.4em] hover:bg-white transition-all">WhatsApp
+                                    Inquiry</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </main>
-        <section class="py-24 bg-surface-dark relative">
-            <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
-                <div class="flex flex-col items-center text-center mb-24 max-w-3xl mx-auto">
-                    <span class="text-primary text-xs font-bold uppercase tracking-[0.3em] mb-4">The Concept</span>
-                    <h2 class="font-display text-4xl md:text-5xl text-white mb-8">Royalty Meets Modern Fashion</h2>
-                    <p class="text-text-muted text-lg font-light leading-loose">
-                        Designed for the modern sovereign, the Galaxy Collection transcends traditional tailoring. We've
-                        sourced the darkest wools and the brightest silks to create a contrast that echoes the universe
-                        itself. Every button is a planet; every stitch, an orbit.
-                    </p>
-                </div>
-                <div class="flex flex-col md:flex-row items-center gap-12 mb-32">
-                    <div class="w-full md:w-1/2 h-[700px] relative">
-                        <div class="absolute top-4 left-4 w-full h-full border border-primary/30 z-0"></div>
-                        <div class="w-full h-full bg-cover bg-center relative z-10 grayscale hover:grayscale-0 transition-all duration-700"
-                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5u0Zt-BJ2TJs7gxyxVBu8hxcKiDzExo1ah5cHfD0xnOy3kSEnVRQCg0zefYRNaSrT4BAbuVBIzt8whvNNEtnJm_Rw4M0lXG36fn-xI-Vx8wYIT7e9KmC53mmkllXosLIp__FqL-2harO1OIsEvjOJtlvqV8vWjNVZIR_MLok2RgOaw-NRN5FLxuyY8pwkq1K7Q7uDYeAl9go8sy3Fg1uvS7HZ8pJesrJpJKLKZGnj4dfNRYy3_PU7UUxRn-mXxF2MTr0cBmSSBgfE");'>
+            </section>
+
+            <!-- Limited Drop Feature -->
+            <section class="py-32 bg-surface-dark overflow-hidden">
+                <div class="max-w-7xl mx-auto px-6">
+                    <div
+                        class="relative bg-background-dark border border-primary/20 rounded-3xl p-12 lg:p-24 flex flex-col lg:flex-row items-center gap-20">
+                        <div class="absolute top-0 right-0 p-12 opacity-5 pointer-events-none">
+                            <span class="material-symbols-outlined text-[200px]">lock_open</span>
                         </div>
-                    </div>
-                    <div class="w-full md:w-1/2 md:pl-12">
-                        <span class="text-6xl text-white/5 font-display font-bold absolute -mt-16 ml-[-20px]">01</span>
-                        <h3 class="font-display text-4xl text-white mb-6 relative z-10">The Nebula Suit</h3>
-                        <p class="text-text-muted mb-8 font-light leading-relaxed">
-                            A masterpiece of deep navy wool, featuring a subtle, shimmering gradient that reveals itself
-                            only in motion. Cut for a silhouette that commands attention in any boardroom or ballroom.
-                        </p>
-                        <ul class="space-y-4 mb-10">
-                            <li class="flex items-center gap-4 text-sm text-white">
-                                <span class="h-[1px] w-6 bg-primary"></span>
-                                Peak Lapels in Satin
-                            </li>
-                            <li class="flex items-center gap-4 text-sm text-white">
-                                <span class="h-[1px] w-6 bg-primary"></span>
-                                Double-Breasted Construction
-                            </li>
-                            <li class="flex items-center gap-4 text-sm text-white">
-                                <span class="h-[1px] w-6 bg-primary"></span>
-                                24k Gold Plated Cufflinks
-                            </li>
-                        </ul>
-                        <a class="inline-flex items-center text-primary text-sm font-bold uppercase tracking-widest hover:text-white transition-colors"
-                            href="#">
-                            Explore The Look <span class="material-symbols-outlined ml-2 text-lg">arrow_right_alt</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row-reverse items-center gap-12 mb-32">
-                    <div class="w-full md:w-1/2 h-[700px] relative">
-                        <div class="absolute -bottom-4 -right-4 w-full h-full border border-white/10 z-0"></div>
-                        <div class="w-full h-full bg-cover bg-center relative z-10 grayscale hover:grayscale-0 transition-all duration-700"
-                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAAscGSnCoARExnG9tDNY536QpPWH4IiLnx_ypvkSnJXx4RLhJpjUj33i6aRF8h412Gajo7mYBbnGt8xqFSWL3lPdA7as_BP_dFR-KV0hqh-jET6FCHNa8nOY46zm9eOWptrzRuHe5eAzCbaApc0Ith8iKAYXyb6z0kYrg40KxX7mgG78mLbtqYU9V1W-iHp9AmZ0k2F8e0tGpBWo4KfvNkT3SDEwtwxJmTJg6-Xwvz_QIxK-BBWieN6yq4xKnUrSQEyAMOZYyNClOD");'>
-                        </div>
-                    </div>
-                    <div class="w-full md:w-1/2 md:pr-12 text-right md:text-left">
-                        <div class="flex flex-col items-end md:items-start">
-                            <span
-                                class="text-6xl text-white/5 font-display font-bold absolute -mt-16 mr-[-20px] md:mr-0 md:ml-[-20px]">02</span>
-                            <h3 class="font-display text-4xl text-white mb-6 relative z-10">The Artisan's Touch</h3>
-                            <p class="text-text-muted mb-8 font-light leading-relaxed">
-                                Behind the starlight lies the structure. Our master tailors spend over 80 hours on each
-                                Galaxy piece, ensuring a fit that feels weightless yet substantial.
+                        <div class="lg:w-1/2 relative z-10">
+                            <span class="text-primary text-xs font-bold uppercase tracking-[0.5em] mb-6 block">Unlock
+                                Excellence</span>
+                            <h2 class="font-display text-5xl text-white mb-8">Personal Branding Consultation</h2>
+                            <p class="text-text-muted text-lg font-light leading-relaxed mb-12">
+                                For the man who needs more than a suit. Our private stylings are personal branding
+                                sessions. We help you curate a wardrobe that communicates your vision before you even
+                                speak.
                             </p>
-                            <ul class="space-y-4 mb-10">
-                                <li class="flex items-center justify-end md:justify-start gap-4 text-sm text-white">
-                                    <span class="hidden md:block h-[1px] w-6 bg-primary"></span>
-                                    Hand-Stitched Buttonholes
-                                    <span class="md:hidden h-[1px] w-6 bg-primary"></span>
-                                </li>
-                                <li class="flex items-center justify-end md:justify-start gap-4 text-sm text-white">
-                                    <span class="hidden md:block h-[1px] w-6 bg-primary"></span>
-                                    Floating Canvas Interlining
-                                    <span class="md:hidden h-[1px] w-6 bg-primary"></span>
-                                </li>
-                                <li class="flex items-center justify-end md:justify-start gap-4 text-sm text-white">
-                                    <span class="hidden md:block h-[1px] w-6 bg-primary"></span>
-                                    Bespoke Fitting Process
-                                    <span class="md:hidden h-[1px] w-6 bg-primary"></span>
-                                </li>
-                            </ul>
-                            <a class="inline-flex items-center text-primary text-sm font-bold uppercase tracking-widest hover:text-white transition-colors"
-                                href="#">
-                                Discover Craftsmanship <span
-                                    class="material-symbols-outlined ml-2 text-lg">arrow_right_alt</span>
-                            </a>
+                            <button onclick="window.location.href='./private-experience.html'"
+                                class="px-12 py-5 bg-primary text-black text-xs font-bold uppercase tracking-[0.4em] hover:bg-white transition-all">The
+                                Private Portal</button>
+                        </div>
+                        <div class="lg:w-1/2 relative z-10">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2z07zjiaiRWlR0zhp--kG-LH0ViOjGhlS3d8JuP43lapZtGQQ8ULU7R9_ONk3feIGoB2PQ2mb4RkhbauQAQe9V1f_B9wxDZji6RHmyTiOUlfhiFbU1qO-LqRlyos_p7pop_u2DGQUv5ZoHO3jsCSZXhaAwN1J9QO7oPPwYSzkoV0FR3K0BT7d05c_D7ifQENNyNS7bGrrmujf8AiXaMuQqtAn9HIrN11zQ3dIqlKxdYL84HitasLQpNfRJfDGYNQ-FUQyXqztxlvO"
+                                alt="Consultation" class="w-full h-full object-cover rounded-2xl shadow-2xl">
                         </div>
                     </div>
                 </div>
-                <div class="flex flex-col md:flex-row items-center gap-12">
-                    <div class="w-full md:w-1/2 h-[700px] relative">
-                        <div class="absolute top-4 right-4 w-full h-full border border-primary/30 z-0"></div>
-                        <div class="w-full h-full bg-cover bg-center relative z-10 grayscale hover:grayscale-0 transition-all duration-700"
-                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuABMeAFwun1cAY7Ge9kK6XoaV7mifQa8iEHkjYdzNSkvUube6YPrLThzjQdoBGr5z6VbHbZiCGab8FOnVzDNvaabBOMyV4CBmoTFbYa6SJZuzWsW57DztudFFY7QzqLqOvEumhyQyGdZFmHUke9TC6K7xis2x3Hc5Gh-drWFW6iMob8Lz3Gb7agsDCRLyHApkPm8cO0jiWDEiBK44Rr5tB6uUJDyQ5aJB90QfhdSJEHVUgcPUbJAXkYvt19RrUDsZ4JtDlzCDNijg0b");'>
-                        </div>
-                    </div>
-                    <div class="w-full md:w-1/2 md:pl-12">
-                        <span class="text-6xl text-white/5 font-display font-bold absolute -mt-16 ml-[-20px]">03</span>
-                        <h3 class="font-display text-4xl text-white mb-6 relative z-10">The Constellation Wardrobe</h3>
-                        <p class="text-text-muted mb-8 font-light leading-relaxed">
-                            Not just a suit, but a system. The Galaxy Collection includes essential wardrobe components
-                            designed to interchange seamlessly, creating a universe of outfits.
-                        </p>
-                        <ul class="space-y-4 mb-10">
-                            <li class="flex items-center gap-4 text-sm text-white">
-                                <span class="h-[1px] w-6 bg-primary"></span>
-                                Modular Jacket Design
-                            </li>
-                            <li class="flex items-center gap-4 text-sm text-white">
-                                <span class="h-[1px] w-6 bg-primary"></span>
-                                Complementary Footwear
-                            </li>
-                            <li class="flex items-center gap-4 text-sm text-white">
-                                <span class="h-[1px] w-6 bg-primary"></span>
-                                Travel-Ready Garment Bags
-                            </li>
-                        </ul>
-                        <a class="inline-flex items-center text-primary text-sm font-bold uppercase tracking-widest hover:text-white transition-colors"
-                            href="#">
-                            Build Your Wardrobe <span
-                                class="material-symbols-outlined ml-2 text-lg">arrow_right_alt</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-20 bg-background-dark border-t border-white/5">
-            <div class="max-w-[1440px] mx-auto px-6 lg:px-12">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="group p-8 border border-white/5 hover:border-primary/50 transition-colors duration-500">
-                        <span
-                            class="material-symbols-outlined text-4xl text-primary mb-6 group-hover:scale-110 transition-transform duration-300">diamond</span>
-                        <h4 class="font-display text-xl text-white mb-3">Rare Materials</h4>
-                        <p class="text-text-muted text-sm font-light leading-relaxed">Sourced from the most exclusive
-                            mills in Biella, Italy, featuring rare vicuña and cashmere blends.</p>
-                    </div>
-                    <div class="group p-8 border border-white/5 hover:border-primary/50 transition-colors duration-500">
-                        <span
-                            class="material-symbols-outlined text-4xl text-primary mb-6 group-hover:scale-110 transition-transform duration-300">stars</span>
-                        <h4 class="font-display text-xl text-white mb-3">Celestial Lining</h4>
-                        <p class="text-text-muted text-sm font-light leading-relaxed">Every jacket features our
-                            signature silk lining printed with accurate star maps from the night of Efex's founding.</p>
-                    </div>
-                    <div class="group p-8 border border-white/5 hover:border-primary/50 transition-colors duration-500">
-                        <span
-                            class="material-symbols-outlined text-4xl text-primary mb-6 group-hover:scale-110 transition-transform duration-300">fingerprint</span>
-                        <h4 class="font-display text-xl text-white mb-3">Unique Identity</h4>
-                        <p class="text-text-muted text-sm font-light leading-relaxed">Each piece is numbered and
-                            monogrammed, ensuring your place in the Galaxy is uniquely yours.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-32 relative overflow-hidden flex items-center justify-center">
-            <div class="absolute inset-0 bg-cover bg-center bg-fixed"
-                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA2z07zjiaiRWlR0zhp--kG-LH0ViOjGhlS3d8JuP43lapZtGQQ8ULU7R9_ONk3feIGoB2PQ2mb4RkhbauQAQe9V1f_B9wxDZji6RHmyTiOUlfhiFbU1qO-LqRlyos_p7pop_u2DGQUv5ZoHO3jsCSZXhaAwN1J9QO7oPPwYSzkoV0FR3K0BT7d05c_D7ifQENNyNS7bGrrmujf8AiXaMuQqtAn9HIrN11zQ3dIqlKxdYL84HitasLQpNfRJfDGYNQ-FUQyXqztxlvO");'>
-            </div>
-            <div class="absolute inset-0 bg-black/80"></div>
-            <div class="relative z-10 text-center max-w-2xl px-6">
-                <h2 class="font-display text-5xl lg:text-6xl text-white mb-8">Ascend to the Stars</h2>
-                <p class="text-gray-300 text-lg mb-12 font-light">
-                    The Galaxy Collection is available for private viewing by appointment only. Secure your consultation
-                    today.
-                </p>
-                <a href="contact.html" class="flex flex-col sm:flex-row gap-6 justify-center">
-                    <button
-                        class="bg-primary text-black px-10 py-4 text-sm font-bold uppercase tracking-widest hover:bg-white transition-colors duration-300 min-w-[200px]">
-                        Book Appointment
-                    </button>
-                </a>
-            </div>
-        </section>
+            </section>
+        </main>
+
         <div id="footer-container"></div>
     </div>
     <script src="./js/layout.js"></script>

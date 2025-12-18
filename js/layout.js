@@ -6,11 +6,11 @@ const siteConfig = {
     brandName: "EFEX",
     navLinks: [
         { name: "The Boutique", href: "./boutique.html" },
-        { name: "Gallery", href: "./gallery.html" },
+        { name: "The Atelier", href: "./atelier.html" },
+        { name: "Private Experience", href: "./private-experience.html" },
         { name: "Services", href: "./services.html" },
         { name: "The House", href: "./the-house.html" },
         { name: "Journal", href: "./journal.html" },
-        { name: "About Us", href: "./about.html" },
         { name: "Contact", href: "./contact.html" }
     ],
     footerLinks: {
@@ -21,10 +21,16 @@ const siteConfig = {
             { name: "Corporate Attire", href: "./services.html" }
         ],
         support: [
-            { name: "Size Guide", href: "#" }, // Keeping specific useful ones or updating
+            { name: "Our Showroom", href: "./the-house.html" },
             { name: "Contact Us", href: "./contact.html" }
         ]
-    }
+    },
+    conciergeOptions: [
+        { id: 'whatsapp', label: 'Chat on WhatsApp', icon: 'chat', description: 'Immediate response from our styling desk.' },
+        { id: 'showroom', label: 'Visit Showroom', icon: 'location_on', description: 'Book an exclusive tour of our Lagos atelier.' },
+        { id: 'private', label: 'Private Stylist', icon: 'person_search', description: 'Personal branding & wardrobe management.' }
+    ],
+    whatsappNumber: "+234XXXXXXXXXX" // PLACEHOLDER: Targeted for Nigeria
 };
 
 function renderHeader() {
@@ -49,6 +55,10 @@ function renderHeader() {
             ${navLinksHTML}
         </nav>
         <div class="flex items-center gap-4 z-50 text-white">
+            <button id="showroom-btn" class="hidden md:flex items-center gap-2 px-5 py-2.5 bg-primary text-black rounded-full hover:bg-white transition-all group scale-95 hover:scale-100">
+                <span class="material-symbols-outlined text-sm">event_available</span>
+                <span class="text-[10px] font-bold uppercase tracking-widest">Book Showroom</span>
+            </button>
             <button id="mobile-menu-btn" class="lg:hidden flex size-10 items-center justify-center rounded-full hover:bg-white/10 text-white">
                 <span class="material-symbols-outlined text-[20px]">menu</span>
             </button>
@@ -69,7 +79,111 @@ function renderHeader() {
     `;
 
     headerContainer.innerHTML = html;
+    renderConcierge();
     initMobileMenu();
+    initPrivateClient();
+}
+
+function renderConcierge() {
+    let conciergeContainer = document.getElementById('concierge-container');
+    if (!conciergeContainer) {
+        conciergeContainer = document.createElement('div');
+        conciergeContainer.id = 'concierge-container';
+        document.body.appendChild(conciergeContainer);
+    }
+
+    const html = `
+    <!-- Floating Concierge Trigger -->
+    <div id="concierge-trigger" class="fixed bottom-8 right-8 z-[100] group cursor-pointer">
+        <div class="absolute inset-0 bg-primary pulse-animation rounded-full opacity-20 scale-150 group-hover:scale-175 transition-transform duration-500"></div>
+        <div class="relative size-16 bg-black border border-primary text-primary rounded-full flex items-center justify-center shadow-2xl group-hover:bg-primary group-hover:text-black transition-all duration-300">
+            <span class="material-symbols-outlined text-3xl font-light">support_agent</span>
+        </div>
+        <div class="absolute bottom-full right-0 mb-4 whitespace-nowrap bg-black/80 backdrop-blur-md px-4 py-2 rounded-full border border-primary/20 text-xs font-bold uppercase tracking-widest text-primary opacity-0 group-hover:opacity-100 -translate-y-2 group-hover:translate-y-0 transition-all">
+            Consult a Stylist
+        </div>
+    </div>
+
+    <!-- Concierge Modal -->
+    <div id="concierge-modal" class="fixed inset-0 z-[200] hidden items-center justify-center p-6">
+        <div class="absolute inset-0 bg-black/90 backdrop-blur-md"></div>
+        <div class="relative bg-background-dark border border-white/10 p-8 lg:p-12 rounded-2xl max-w-xl w-full shadow-[0_0_50px_rgba(212,175,55,0.1)]">
+            <button id="close-concierge" class="absolute top-6 right-6 text-white hover:text-primary transition-colors">
+                <span class="material-symbols-outlined">close</span>
+            </button>
+            <div class="text-center mb-10">
+                <span class="text-primary text-xs font-bold uppercase tracking-[0.3em] mb-4 block">Personal Assistance</span>
+                <h2 class="font-display text-4xl text-white mb-4">How can we assist you?</h2>
+                <p class="text-text-muted text-sm font-light">Select a service to begin your premium experience.</p>
+            </div>
+            <div class="grid grid-cols-1 gap-4">
+                ${siteConfig.conciergeOptions.map(option => `
+                    <button class="concierge-item group flex items-start gap-4 p-6 bg-white/5 border border-white/5 hover:border-primary/50 hover:bg-white/10 transition-all text-left rounded-xl" data-id="${option.id}">
+                        <div class="size-12 rounded-full border border-primary/30 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-black transition-all">
+                            <span class="material-symbols-outlined">${option.icon}</span>
+                        </div>
+                        <div>
+                            <p class="text-white font-bold uppercase tracking-widest text-xs mb-1">${option.label}</p>
+                            <p class="text-text-muted text-[10px] leading-relaxed">${option.description}</p>
+                        </div>
+                    </button>
+                `).join('')}
+            </div>
+        </div>
+    </div>
+    `;
+
+    conciergeContainer.innerHTML = html;
+    initConcierge();
+}
+
+function initConcierge() {
+    const trigger = document.getElementById('concierge-trigger');
+    const modal = document.getElementById('concierge-modal');
+    const closeBtn = document.getElementById('close-concierge');
+    const items = document.querySelectorAll('.concierge-item');
+
+    if (!trigger || !modal) return;
+
+    trigger.addEventListener('click', () => {
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+        document.body.style.overflow = 'hidden';
+    });
+
+    const closeModal = () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+    };
+
+    closeBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    items.forEach(item => {
+        item.addEventListener('click', () => {
+            const id = item.getAttribute('data-id');
+            if (id === 'whatsapp') {
+                const text = encodeURIComponent("Hello EFEX, I'm interested in your luxury tailoring services. I'd like to consult a stylist.");
+                window.open(`https://wa.me/${siteConfig.whatsappNumber.replace('+', '')}?text=${text}`, '_blank');
+            } else if (id === 'showroom') {
+                window.location.href = './contact.html?subject=Showroom Booking';
+            } else {
+                window.location.href = `./contact.html?subject=${encodeURIComponent(item.querySelector('p').innerText)}`;
+            }
+        });
+    });
+}
+
+function initPrivateClient() {
+    const btn = document.getElementById('showroom-btn');
+    if (!btn) return;
+
+    btn.addEventListener('click', () => {
+        window.location.href = './contact.html?subject=Request Showroom Invitation';
+    });
 }
 
 function renderFooter() {

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>The Atelier - Efex Luxury</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#D4AF37",
+                        "background-dark": "#0a0a0a",
+                        "surface-dark": "#141414",
+                        "text-main": "#FFFFFF",
+                        "text-muted": "#A1A1AA",
+                    },
+                    fontFamily: {
+                        "display": ["Playfair Display", "serif"],
+                        "body": ["Montserrat", "sans-serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body class="bg-background-dark text-white font-body antialiased selection:bg-primary selection:text-black">
+    <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+        <div id="header-container"></div>
+
+        <main class="relative pt-24">
+            <!-- Hero Section -->
+            <section class="relative h-[70vh] flex items-center justify-center overflow-hidden border-b border-white/5">
+                <div class="absolute inset-0 bg-cover bg-center grayscale opacity-40 scale-105 animate-pulse-slow"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA5u0Zt-BJ2TJs7gxyxVBu8hxcKiDzExo1ah5cHfD0xnOy3kSEnVRQCg0zefYRNaSrT4BAbuVBIzt8whvNNEtnJm_Rw4M0lXG36fn-xI-Vx8wYIT7e9KmC53mmkllXosLIp__FqL-2harO1OIsEvjOJtlvqV8vWjNVZIR_MLok2RgOaw-NRN5FLxuyY8pwkq1K7Q7uDYeAl9go8sy3Fg1uvS7HZ8pJesrJpJKLKZGnj4dfNRYy3_PU7UUxRn-mXxF2MTr0cBmSSBgfE");'>
+                </div>
+                <div class="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-background-dark"></div>
+                <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+                    <span
+                        class="text-primary text-xs font-bold uppercase tracking-[0.4em] mb-6 block animate-fade-in-up">The
+                        Craft of Sovereignty</span>
+                    <h1 class="font-display text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
+                        THE <span class="italic font-serif text-primary">ATELIER</span></h1>
+                    <p class="text-text-muted text-lg font-light leading-relaxed max-w-2xl mx-auto drop-shadow-lg">
+                        Where centuries of sartorial heritage meet the visionary pulse of modern Nigeria. Every stitch
+                        is a commitment to excellence.
+                    </p>
+                </div>
+            </section>
+
+            <!-- The Process -->
+            <section class="py-32 bg-background-dark">
+                <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center mb-32">
+                        <div class="relative">
+                            <div
+                                class="absolute -top-10 -left-10 text-primary/10 font-display text-[200px] leading-none select-none">
+                                01</div>
+                            <div class="relative z-10 rounded-2xl overflow-hidden glass-card p-1">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiO5ytL7mVSvV2HEUn7y-r3O08uXMegqmjsH6gcLJkFNZa2ed-m9XHr5zZPUn2QPEioN8-_gwlWllj_B-LCsODoEGaMTmtkOM7o4n7V1WjCGg1abftx37YV-IrTP1HRjkoXq4vFV7PiXB2dHs4v00RYv8qyFanjCvrrB__UJuDxTqgKdXozWi-P4gSw09fLcqU_nxMP57ZN7Vj9UQyzWv10KXcxlIcRhKF4EH7SVKDqirrqgOKXvyI7D-X5WRhvUE_EqKW7wxM5AtK"
+                                    alt="Fabric Selection"
+                                    class="w-full h-[500px] object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-1000">
+                            </div>
+                        </div>
+                        <div>
+                            <span class="text-primary text-xs font-bold uppercase tracking-widest mb-4 block">Stage
+                                I</span>
+                            <h2 class="font-display text-4xl text-white mb-6">Material Mastery</h2>
+                            <p class="text-text-muted text-lg font-light leading-relaxed mb-8">
+                                We source exclusively from the world's most prestigious mills, selecting rare wools,
+                                silks, and velvets that resonate with the Nigerian climate and aesthetic demands. Each
+                                fabric is inspected for its weave, weight, and soul.
+                            </p>
+                            <ul class="space-y-4">
+                                <li class="flex items-center gap-4 text-sm text-white/80 font-light">
+                                    <span class="size-2 bg-primary rounded-full"></span>
+                                    Italian S180's & Vicuña Blends
+                                </li>
+                                <li class="flex items-center gap-4 text-sm text-white/80 font-light">
+                                    <span class="size-2 bg-primary rounded-full"></span>
+                                    Hand-Woven Signature Linings
+                                </li>
+                                <li class="flex items-center gap-4 text-sm text-white/80 font-light">
+                                    <span class="size-2 bg-primary rounded-full"></span>
+                                    Bespoke Metallic Threading
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center mb-32 md:flex-row-reverse">
+                        <div class="md:order-2 relative">
+                            <div
+                                class="absolute -top-10 -right-10 text-primary/10 font-display text-[200px] leading-none select-none">
+                                02</div>
+                            <div class="relative z-10 rounded-2xl overflow-hidden glass-card p-1">
+                                <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5u0Zt-BJ2TJs7gxyxVBu8hxcKiDzExo1ah5cHfD0xnOy3kSEnVRQCg0zefYRNaSrT4BAbuVBIzt8whvNNEtnJm_Rw4M0lXG36fn-xI-Vx8wYIT7e9KmC53mmkllXosLIp__FqL-2harO1OIsEvjOJtlvqV8vWjNVZIR_MLok2RgOaw-NRN5FLxuyY8pwkq1K7Q7uDYeAl9go8sy3Fg1uvS7HZ8pJesrJpJKLKZGnj4dfNRYy3_PU7UUxRn-mXxF2MTr0cBmSSBgfE"
+                                    alt="The Cut"
+                                    class="w-full h-[500px] object-cover rounded-xl grayscale hover:grayscale-0 transition-all duration-1000">
+                            </div>
+                        </div>
+                        <div class="md:order-1">
+                            <span class="text-primary text-xs font-bold uppercase tracking-widest mb-4 block">Stage
+                                II</span>
+                            <h2 class="font-display text-4xl text-white mb-6">The Architect's Cut</h2>
+                            <p class="text-text-muted text-lg font-light leading-relaxed mb-8">
+                                Behind every suit is a mathematical precision. Our patterns are hand-cut to your
+                                specific biomechanics, ensuring a silhouette that doesn't just fit—it empowers.
+                            </p>
+                            <p class="text-text-muted font-light leading-relaxed mb-8">
+                                In our Lagos workshop, tradition meets technology to create a structure that is both
+                                light for the equatorial heat and sharp for the global boardroom.
+                            </p>
+                            <button onclick="window.location.href='./contact.html?subject=Atelier%20Inquiry'"
+                                class="text-primary text-[10px] font-bold uppercase tracking-[0.3em] border-b border-primary/50 pb-2 hover:text-white hover:border-white transition-all">Details
+                                of the process</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cultural Heritage Section -->
+            <section class="py-24 bg-surface-dark border-y border-white/5">
+                <div class="max-w-4xl mx-auto px-6 text-center">
+                    <span class="text-primary text-xs font-bold uppercase tracking-[0.4em] mb-8 block">Rooted in
+                        Excellence</span>
+                    <h2 class="font-display text-4xl md:text-5xl text-white mb-10">Nigerian Soul, <span
+                            class="italic font-serif text-primary">Global</span> Standard</h2>
+                    <p class="text-text-muted text-lg font-light leading-relaxed mb-12">
+                        We don't just replicate European styles. We interpret global luxury through the lens of Nigerian
+                        prestige. Our atelier is a hub for the new generation of craftsmen who are reclaiming the
+                        narrative of African luxury.
+                    </p>
+                    <div class="flex justify-center gap-12 grayscale opacity-50">
+                        <!-- Simulated Icons for heritage/craft -->
+                        <span class="material-symbols-outlined text-5xl">diamond</span>
+                        <span class="material-symbols-outlined text-5xl">cognition</span>
+                        <span class="material-symbols-outlined text-5xl">architecture</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <div id="footer-container"></div>
+    </div>
+    <script src="./js/layout.js"></script>
+</body>
+
+</html>
