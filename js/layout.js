@@ -5,12 +5,11 @@
 const siteConfig = {
     brandName: "EFEX",
     navLinks: [
-        { name: "The Boutique", href: "./boutique.html" },
-        { name: "The Atelier", href: "./atelier.html" },
-        { name: "Private Experience", href: "./private-experience.html" },
+        { name: "Shop", href: "./shop.html" },
+        { name: "Private", href: "./private.html" },
         { name: "Services", href: "./services.html" },
-        { name: "The House", href: "./the-house.html" },
-        { name: "Journal", href: "./journal.html" },
+        { name: "Heritage", href: "./heritage.html" },
+        { name: "Stories", href: "./stories.html" },
         { name: "Contact", href: "./contact.html" }
     ],
     footerLinks: {
@@ -21,7 +20,7 @@ const siteConfig = {
             { name: "Corporate Attire", href: "./services.html" }
         ],
         support: [
-            { name: "Our Showroom", href: "./the-house.html" },
+            { name: "Heritage", href: "./heritage.html" },
             { name: "Contact Us", href: "./contact.html" }
         ]
     },
