@@ -1,10 +1,13 @@
 import './styles/main.css';
+import './styles/home.css';
+import './styles/contact.css';
 import { state, subscribe } from './state/store.js';
 import { Home } from './pages/Home.js';
 import { Auth } from './pages/Auth.js';
 import { Dashboard } from './pages/Dashboard.js';
 import { Admin } from './pages/Admin.js';
 import { Shop } from './pages/Shop.js';
+import { Contact } from './pages/Contact.js';
 import { Header } from './components/Header.js';
 import { Footer } from './components/Footer.js';
 
@@ -16,7 +19,8 @@ const routes = {
   '/auth': Auth,
   '/dashboard': Dashboard,
   '/admin': Admin,
-  '/shop': Shop
+  '/shop': Shop,
+  '/contact': Contact
 };
 
 // Navigation function
