@@ -13,8 +13,12 @@ export const Header = (user) => {
     const navHtml = `
       <div class="container">
         <nav>
-          <a href="/" class="logo" data-link>
-            <img src="/logo.png" alt="Efex Luxury" />
+          <a href="/" class="brand-logo" data-link>
+            <img src="/logo.png" alt="Efex Luxury Wear Logo" class="logo-image" />
+            <div class="brand-text">
+              <span class="brand-name">Efex Luxury Wear</span>
+              <span class="brand-tagline">Authentic Fashion</span>
+            </div>
           </a>
           
           <div class="nav-links">
@@ -24,10 +28,15 @@ export const Header = (user) => {
               ? `<a href="/dashboard" data-link>My Account</a>` 
               : `<a href="/auth" data-link>Login</a>`
             }
-            <button id="cart-btn" class="btn btn-outline" style="border:none; padding: 0.5rem; position: relative;">
-               Cart <span style="background: var(--color-gold); color: black; border-radius: 50%; padding: 0 6px; font-size: 0.7rem; vertical-align: top; margin-left: 4px;">${cartCount}</span>
+            <button id="cart-btn" class="cart-button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+              <span class="cart-count">${cartCount}</span>
             </button>
-             ${state.user ? `<button id="logout-btn" class="text-gold" style="background:none; border:none; margin-left:1rem; font-size: 0.8rem;">Logout</button>` : ''}
+             ${state.user ? `<button id="logout-btn" class="logout-button">Logout</button>` : ''}
           </div>
         </nav>
       </div>
