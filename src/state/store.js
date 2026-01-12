@@ -5,26 +5,35 @@
 
 const STORAGE_KEY = 'efex_db_v2';
 
-// Dummy Data
+// Nigerian Fashion Data
 const INITIAL_PRODUCTS = [
+  // Men's Collection
   { 
     id: 1, 
-    name: 'The Royal Agbada', 
-    price: 150000, 
-    category: 'Suits', 
+    name: 'Royal Blue Agbada', 
+    price: 185000, 
+    category: 'Traditional Wear', 
     department: 'Men',
-    image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=800&auto=format&fit=crop' 
+    image: '/images/products/nigerian_agbada_men_1768240346228.png' 
   },
   { 
     id: 2, 
-    name: 'Velvet Evening Gown', 
-    price: 95000, 
-    category: 'Dresses', 
-    department: 'Women',
-    image: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=800&auto=format&fit=crop' 
+    name: 'Senator Kaftan White Gold', 
+    price: 125000, 
+    category: 'Traditional Wear', 
+    department: 'Men',
+    image: '/images/products/nigerian_kaftan_men_1768240409013.png' 
   },
   { 
     id: 3, 
+    name: 'Emerald Dashiki Shirt', 
+    price: 65000, 
+    category: 'Casual Wear', 
+    department: 'Men',
+    image: '/images/products/nigerian_dashiki_men_1768240443851.png' 
+  },
+  { 
+    id: 4, 
     name: 'Onyx Gold Watch', 
     price: 450000, 
     category: 'Accessories', 
@@ -32,28 +41,104 @@ const INITIAL_PRODUCTS = [
     image: 'https://images.unsplash.com/photo-1523170335258-f5ed11844a49?q=80&w=800&auto=format&fit=crop' 
   },
   { 
-    id: 4, 
+    id: 5, 
     name: 'Lagos City Loafers', 
-    price: 65000, 
+    price: 75000, 
     category: 'Shoes',
     department: 'Men', 
     image: 'https://images.unsplash.com/photo-1614252369475-531eba835eb1?q=80&w=800&auto=format&fit=crop' 
   },
+  { 
+    id: 6, 
+    name: 'Classic Agbada Burgundy', 
+    price: 165000, 
+    category: 'Traditional Wear', 
+    department: 'Men',
+    image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?q=80&w=800&auto=format&fit=crop' 
+  },
+
+  // Women's Collection
+  { 
+    id: 7, 
+    name: 'Ankara Maxi Gown', 
+    price: 95000, 
+    category: 'Dresses', 
+    department: 'Women',
+    image: '/images/products/nigerian_ankara_women_1768240362466.png' 
+  },
+  { 
+    id: 8, 
+    name: 'Iro and Buba Purple Gold', 
+    price: 145000, 
+    category: 'Traditional Wear', 
+    department: 'Women',
+    image: '/images/products/nigerian_iro_buba_women_1768240426603.png' 
+  },
+  { 
+    id: 9, 
+    name: 'Ankara Wrapper & Blouse', 
+    price: 85000, 
+    category: 'Traditional Wear', 
+    department: 'Women',
+    image: '/images/products/nigerian_wrapper_women_1768240469343.png' 
+  },
   {
-    id: 5,
+    id: 10,
     name: 'Silk Ankara Scarf',
     price: 25000,
     category: 'Accessories',
     department: 'Women',
     image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=800&auto=format&fit=crop'
   },
+  { 
+    id: 11, 
+    name: 'Velvet Evening Gown', 
+    price: 115000, 
+    category: 'Dresses', 
+    department: 'Women',
+    image: 'https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=800&auto=format&fit=crop' 
+  },
+  { 
+    id: 12, 
+    name: 'Gold Beaded Clutch', 
+    price: 45000, 
+    category: 'Accessories', 
+    department: 'Women',
+    image: 'https://images.unsplash.com/photo-1564422167509-4f3a4fc679c0?q=80&w=800&auto=format&fit=crop' 
+  },
+
+  // Children's Collection
   {
-    id: 6,
-    name: 'Kids Festiva Set',
+    id: 13,
+    name: 'Kids Ankara Festive Set',
+    price: 45000,
+    category: 'Traditional Wear',
+    department: 'Children',
+    image: '/images/products/nigerian_children_outfit_1768240380700.png'
+  },
+  {
+    id: 14,
+    name: 'Buba & Sokoto Pink Set',
+    price: 38000,
+    category: 'Traditional Wear',
+    department: 'Children',
+    image: '/images/products/nigerian_children_buba_1768240492393.png'
+  },
+  {
+    id: 15,
+    name: 'Kids Dashiki Outfit',
     price: 35000,
-    category: 'Cloths',
+    category: 'Casual Wear',
     department: 'Children',
     image: 'https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?q=80&w=800&auto=format&fit=crop'
+  },
+  {
+    id: 16,
+    name: 'Children\'s Agbada Set',
+    price: 55000,
+    category: 'Traditional Wear',
+    department: 'Children',
+    image: 'https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?q=80&w=800&auto=format&fit=crop'
   }
 ];
 

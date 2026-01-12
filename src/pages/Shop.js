@@ -45,9 +45,10 @@ export const Shop = () => {
 
   // Product Grid
   const grid = document.createElement('div');
+  grid.className = 'shop-grid';
   grid.style.display = 'grid';
-  grid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(300px, 1fr))';
-  grid.style.gap = '2rem';
+  grid.style.gridTemplateColumns = 'repeat(auto-fill, minmax(280px, 1fr))';
+  grid.style.gap = '1.5rem';
 
   const renderProducts = (category = 'All') => {
     let products = state.products;
