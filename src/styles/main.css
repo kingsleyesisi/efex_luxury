@@ -621,3 +621,91 @@ header nav {
     display: flex;
   }
 }
+
+/* Bottom Navigation - Floating Dock Style */
+.bottom-nav {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 32px);
+  max-width: 400px;
+  height: 64px;
+  background: rgba(18, 18, 18, 0.85);
+  /* Slightly darker for contrast */
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 32px;
+  /* Pill shape */
+  display: none;
+  /* Hidden by default (desktop) */
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 1002;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  padding-bottom: 0;
+  /* Remove safe-area padding as it floats */
+}
+
+.bottom-nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--color-gray-400);
+  font-size: 0.7rem;
+  gap: 4px;
+  width: auto;
+  height: 100%;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 0 12px;
+  position: relative;
+}
+
+.bottom-nav-link svg {
+  width: 22px;
+  height: 22px;
+  stroke-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.bottom-nav-link span {
+  font-weight: 500;
+  transition: transform 0.2s ease;
+  font-size: 0.65rem;
+  letter-spacing: 0.02em;
+}
+
+.bottom-nav-link.active {
+  color: var(--color-gold);
+}
+
+.bottom-nav-link.active svg {
+  stroke: var(--color-gold);
+  filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));
+  transform: translateY(-2px);
+}
+
+.bottom-nav-link:active {
+  transform: scale(0.95);
+}
+
+/* Mobile Media Query for Bottom Nav */
+@media (max-width: 768px) {
+  .bottom-nav {
+    display: flex;
+  }
+
+  /* Add padding to body or main content to prevent covering */
+  .page-content {
+    padding-bottom: 100px;
+    /* More spacing for floating nav */
+  }
+
+  /* Hide Hamburger on mobile where bottom nav is active */
+  .hamburger {
+    display: none !important;
+  }
+}

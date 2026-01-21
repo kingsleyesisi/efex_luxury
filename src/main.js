@@ -10,6 +10,7 @@ import { Shop } from './pages/Shop.js';
 import { Contact } from './pages/Contact.js';
 import { Header } from './components/Header.js';
 import { Footer } from './components/Footer.js';
+import { BottomNav } from './components/BottomNav.js';
 
 const app = document.querySelector('#app');
 
@@ -51,6 +52,9 @@ function render() {
 
   // Footer
   app.appendChild(Footer());
+
+  // Bottom Nav
+  app.appendChild(BottomNav());
 }
 
 // Initial Render

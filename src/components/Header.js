@@ -119,37 +119,6 @@ export const Header = (user) => {
         });
     }
 
-    // Mobile Logout
-    const mobileLogoutBtn = header.querySelector('#mobile-logout-btn');
-    if (mobileLogoutBtn) {
-        mobileLogoutBtn.addEventListener('click', () => {
-            actions.logout();
-            toggleMobileMenu();
-            navigate('/');
-        });
-    }
-
-    // Hamburger Menu Toggle
-    const hamburger = header.querySelector('#hamburger-btn');
-    const mobileMenu = header.querySelector('#mobile-menu');
-    const mobileOverlay = header.querySelector('#mobile-overlay');
-
-    const toggleMobileMenu = () => {
-      hamburger.classList.toggle('active');
-      mobileMenu.classList.toggle('active');
-      mobileOverlay.classList.toggle('active');
-      document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
-    };
-
-    hamburger.addEventListener('click', toggleMobileMenu);
-    mobileOverlay.addEventListener('click', toggleMobileMenu);
-
-    // Close mobile menu on navigation
-    header.querySelectorAll('.mobile-nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        toggleMobileMenu();
-      });
-    });
   };
 
   updateContent();
